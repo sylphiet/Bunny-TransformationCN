@@ -1,0 +1,42 @@
+
+<<widget "img_tf_bunny_doggy_idle">>
+	<<if !_disabled.includes($transformationParts.bunny.ears)>>
+		<img class="layer-halo-front colour-hair anim-idle-2f" @src="'img/sex/doggy/active/transformations/bunny/ears/'+$transformationParts.bunny.ears+'.png'">
+		<img class="layer-backhair colour-hair anim-idle-2f" @src="'img/sex/doggy/active/transformations/bunny/ears/'+$transformationParts.bunny.ears+'_back.png'">
+	<</if>>
+	<<if !_disabled.includes($transformationParts.bunny.tail)>>
+		<img class="layer-sexwings colour-hair anim-idle-2f" @src="'img/sex/doggy/active/transformations/bunny/tail/'+$transformationParts.bunny.tail+'.png'">
+	<</if>>
+<</widget>>
+
+<<widget "img_tf_bunny_doggy_active">>
+	<<if !_disabled.includes($transformationParts.bunny.ears)>>
+		<img @class="'layer-halo-front colour-hair anim-doggy-4f-'+_animspeed" @src="'img/sex/doggy/active/transformations/bunny/ears/'+$transformationParts.bunny.ears+'.png'">
+		<img @class="'layer-backhair colour-hair anim-doggy-4f-'+_animspeed" @src="'img/sex/doggy/active/transformations/bunny/ears/'+$transformationParts.bunny.ears+'_back.png'">
+	<</if>>
+	<<if !_disabled.includes($transformationParts.bunny.tail)>>
+		<img @class="'layer-sexwings colour-hair anim-doggy-4f-'+_animspeed" @src="'img/sex/doggy/active/transformations/bunny/tail/'+$transformationParts.bunny.tail+'.png'">
+	<</if>>
+<</widget>>
+
+<<widget "img_tf_bunny_miss_idle">>
+	<<if !_disabled.includes($transformationParts.bunny.ears)>>
+		<img class="layer-halo-front colour-hair anim-idle-2f" @src="'img/sex/missionary/active/transformations/bunny/ears/'+$transformationParts.bunny.ears+'.png'">
+		<img class="layer-backhair colour-hair anim-idle-2f" @src="'img/sex/missionary/active/transformations/cat/ears/'+$transformationParts.bunny.ears+'_back.png'">
+	<</if>>
+	<<if !_disabled.includes($transformationParts.bunny.tail)>>
+		<img class="layer-sexwings colour-hair anim-idle-2f" @src="'img/sex/missionary/active/transformations/bunny/tail/'+$transformationParts.bunny.tail+'.png'">
+	<</if>>
+<</widget>>
+
+<<widget "img_tf_bunny_miss_active">>
+	<<if !_disabled.includes($transformationParts.bunny.ears)>>
+		<img @class="'layer-halo-front colour-hair anim-doggy-4f-'+_animspeed" @src="'img/sex/missionary/active/transformations/bunny/ears/'+$transformationParts.bunny.ears+'.png'">
+		<img @class="'layer-backhair colour-hair anim-doggy-4f-'+_animspeed" @src="'img/sex/missionary/active/transformations/cat/ears/'+$transformationParts.bunny.ears+'_back.png'">
+	<</if>>
+	<<if !_disabled.includes($transformationParts.bunny.tail)>>
+		<img @class="'layer-sexwings colour-hair anim-doggy-4f-'+_animspeed" @src="'img/sex/missionary/active/transformations/bunny/tail/'+$transformationParts.bunny.tail+'.png'">
+	<</if>>
+<</widget>>
+
+<<widget "img_tf_angel_doggy_idle">>

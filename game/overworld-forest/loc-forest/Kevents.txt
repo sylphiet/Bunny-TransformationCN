@@ -1,0 +1,10 @@
+
+<<link [[Next|Forest]]>><<set $eventskip to 1>><</link>>
+
+:: Forest Clover
+<<effects>>
+你跪下来，开始梳理头发。<<lstress>>
+<<transform bunny 1>><<stress -1>>
+<br><br>
+
+<<link [[Next|Forest]]>><<set $eventskip to 1>><</link>>

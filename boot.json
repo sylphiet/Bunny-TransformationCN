@@ -1,0 +1,356 @@
+{
+  "name": "BunnyTransformation",
+  "version": "0.1.0",
+  "styleFileList": [
+  ],
+  "scriptFileList": [
+   "game/04-Variables/canvasmodel-main.js"
+  ],
+  "tweeFileList": [
+   "game/base-system/mirror.twee",
+   "game/base-system/transformations.twee",
+   "game/base-system/overlays/characteristics.twee",
+   "game/overworld-forest/loc-lake/ivory/schism.twee",
+   "game/overworld-plains/loc-farm/meadowclover.twee"
+  ],
+  "imgFileList": [
+    "img/clothes/head/carrotpin/full.png",
+    "img/clothes/neck/harness/acc_gray.png",
+    "img/clothes/neck/harness/full_gray.png",
+    "img/clothes/neck/harnessleash/acc.png",
+    "img/clothes/neck/harnessleash/full_gray.png",
+    "img/misc/icon/tf_bunny.png",
+    "img/misc/icon/tf_bun_acc.png",
+    "img/misc/icon/clothes/carrot_pin.png",
+    "img/misc/icon/clothes/harness.png",
+    "img/misc/icon/tending/clover.png",
+    "img/sex/doggy/active/transformations/bunny/ears/default.png",
+    "img/sex/doggy/active/transformations/bunny/ears/default_back.png",
+    "img/sex/doggy/active/transformations/bunny/tail/default.png",
+    "img/sex/missionary/active/transformations/bunny/ears/default.png",
+    "img/sex/missionary/active/transformations/bunny/ears/default_back.png",
+    "img/sex/missionary/active/transformations/bunny/tail/default.png",
+    "img/transformations/bunny/earback/default.png",
+    "img/transformations/bunny/earback/lop.png",
+    "img/transformations/bunny/earfront/default.png",
+    "img/transformations/bunny/earfront/lop.png",
+    "img/transformations/bunny/tail/default.png",
+    "img/transformations/bunny/tail/fluffy.png",
+    "img/transformations/demon/horns/antlers.png",
+    "img/img.twee-config.yml",
+    "img/misc/icon/icon.twee-config.yml"
+  ],
+  "additionFile": [
+    "readme.txt"
+  ],
+  "addonPlugin": [
+    {
+      "modName": "TweeReplacer",
+      "addonName": "TweeReplacerAddon",
+      "modVersion": "^1.0.0",
+      "params": [
+        {
+          "passage": "gameStartOnly",
+          "findString": "<<set $seductionskill to 0>>",
+          "replace": "<<set $bunnybuild to 0>>\n<<set $bunny to 0>>\n\n<<set $seductionskill to 0>>"
+        },
+        {
+          "passage": "Widgets variablesStatic",
+          "findString": "doggyactivepush\":\"img/sex/doggyRed/active/body/doggyactivepush.png",
+          "replace": "doggyactivepush\":\"img/sex/doggyRed/active/body/activepush.png"
+        },
+        {
+          "passage": "Widgets variablesVersionUpdate",
+          "findString": "<<if $cat gte 1 or $wolfgirl gte 1 or $cow gte 1 or $harpy gte 1>>",
+          "replace": "<<if $cat gte 1 or $wolfgirl gte 1 or $cow gte 1 or $harpy gte 1 or $bunny gte 1>>"
+        },
+        {
+          "passage": "Widgets variablesVersionUpdate",
+          "findString": "<<widget \"backComp\">>",
+          "replaceFile": "game/04-Variables/Kvariables-versionUpdate.txt"
+        },
+        {
+          "passage": "Widgets Clothing Caption",
+          "findString": "<<if $fox gte 6>><<set $allure += 750>><</if>>",
+          "replace": "<<if $fox gte 6>><<set $allure += 750>><</if>>\n\t<<if $bunny gte 6>><<set $allure += 500>><</if>>"
+        },
+        {
+          "passage": "Widgets Clothing Caption",
+          "findString": "<<if $fox gte 6>><<set $attractiveness += 750>><</if>>",
+          "replace": "<<if $fox gte 6>><<set $attractiveness += 750>><</if>>\n\t<<if $bunny gte 6>><<set $attractiveness +=500>><</if>>"
+        },
+        {
+          "passage": "Widgets Transformation Img",
+          "findString": "<<img_tf_fox_doggy_idle>>",
+          "replace": "<<img_tf_fox_doggy_idle>>\n\t<<img_tf_bunny_doggy_idle>>"
+        },
+        {
+          "passage": "Widgets Transformation Img",
+          "findString": "<<img_tf_fox_doggy_active>>",
+          "replace": "<<img_tf_fox_doggy_active>>\n\t<<img_tf_bunny_doggy_active>>"
+        },
+        {
+          "passage": "Widgets Transformation Img",
+          "findString": "<<img_tf_fox_miss_idle>>",
+          "replace": "<<img_tf_fox_miss_idle>>\n\t<<img_tf_bunny_miss_idle>>"
+        },
+        {
+          "passage": "Widgets Transformation Img",
+          "findString": "<<img_tf_fox_miss_active>>",
+          "replace": "<<img_tf_fox_miss_active>>\n\t<<img_tf_bunny_miss_active>>"
+        },
+        {
+          "passage": "Widgets Transformation Img",
+          "findString": "<<widget \"img_tf_angel_doggy_idle\">>",
+          "replaceFile": "game/base-system/Kimages.txt"
+        },
+        {
+          "passage": "Widgets Icon Img",
+          "findString": "<<set $_hairIcon =  'tf_harpy.png'>>",
+          "replace": "<<set $_hairIcon =  'tf_harpy.png'>>\n\t<<case \"bunny\">>\n\t<<set $_hairIcon = 'tf_bunny.png'>>\n\t<<set $_frontIcon = 'tf_bun_acc.png'>>"
+        },
+        {
+          "passage": "Widgets Text",
+          "findString": "<<widget \"angel\">>",
+          "replaceFile": "game/base-system/Ktext.txt"
+        },
+        {
+          "passage": "Widgets Tips",
+          "findString": "<!-- Animal TF tips -->",
+          "replaceFile": "game/base-system/Ktips.txt"
+        },
+        {
+          "passage": "Widgets",
+          "findString": "Math.max($wolfbuild, $catbuild, $cowbuild, $birdbuild, $foxbuild) is $foxbuild>>",
+          "replace": "Math.max($wolfbuild, $catbuild, $cowbuild, $birdbuild, $foxbuild, $bunnybuild) is $foxbuild>>"
+        },
+        {
+          "passage": "Cheats",
+          "findString": "<<foxTransform 99>><<updatesidebarimg>><</link>><br>",
+          "replace": "<<foxTransform 99>><<updatesidebarimg>><</link>><br>\n\t<<tficon \"bunny\">>兔兔: <<link \"设置\">><<bunnyTransform>><<updatesidebarimg>><</link>> / <<link \"清除\">><<bunnyTransform 99>><<updatesidebarimg>><</link>><br>"
+        },
+        {
+          "passage": "Cheats",
+          "findString": "\"bird\", \"fox\"",
+          "replace": "\"bird\", \"fox\", \"bunny\""
+        },
+        {
+          "passage": "Cheats",
+          "findString": "<<set _name to ({\"fallen\":\"堕天使\",\"angel\":\"天使\",\"demon\":\"恶魔\",\"wolf\":\"狼\",\"cat\":\"猫\",\"cow\":\"牛\",\"bird\":\"鸟\",\"fox\":\"狐狸\"})[_tf]>>",
+          "replace": "<<set _name to ({\"fallen\":\"堕天使\",\"angel\":\"天使\",\"demon\":\"恶魔\",\"wolf\":\"狼\",\"cat\":\"猫\",\"cow\":\"牛\",\"bird\":\"鸟\",\"fox\":\"狐狸\",\"bunny\":\"兔兔\"})[_tf]>>"
+        },
+        {
+          "passage": "Pregnancy",
+          "findString": "<<if $player.penisExist and ($wolfgirl gte 2 or $cat gte 2 or $cow gte 2 or $fox gte 2)>>",
+          "replace": "<<if $player.penisExist and ($wolfgirl gte 2 or $cat gte 2 or $cow gte 2 or $fox gte 2 or $bunny gte 2)>>"
+        },
+        {
+          "passage": "Pregnancy",
+          "findString": "<<set $_changeReduction to $foxbuild>>",
+          "replace": "<<set $_changeReduction to $foxbuild>>\n<<elseif $bunny gte 2>>\n\t<<set $_changeReduction to $bunnybuild>>"
+        },
+        {
+          "passage": "Forest Lily Pick",
+          "findString": "<</link>>",
+          "replaceFile": "game/overworld-forest/loc-forest/Kevents.txt"
+        },
+        {
+          "passage": "Livestock Sleep",
+          "findString": "<<if $cow gte 6 or $wolfgirl gte 6 or $cat gte 6 or $fox gte 6>>",
+          "replace": "<<if $cow gte 6 or $wolfgirl gte 6 or $cat gte 6 or $fox gte 6 or $bunny gte 6>>"
+        },
+        {
+          "passage": "Livestock Sleep",
+          "findString": "<<elseif $cow gte 5 or $wolfgirl gte 5 or $cat gte 5 or $fox gte 5>>",
+          "replace": "<<elseif $cow gte 5 or $wolfgirl gte 5 or $cat gte 5 or $fox gte 5 or $bunny gte 5>>"
+        },
+        {
+          "passage": "Livestock Sleep",
+          "findString": "<<elseif $cow gte 4 or $wolfgirl gte 4 or $cat gte 4 or $fox gte 4>>",
+          "replace": "<<elseif $cow gte 4 or $wolfgirl gte 4 or $cat gte 4 or $fox gte 4 or $bunny gte 4>>"
+        },
+        {
+          "passage": "Livestock Sleep",
+          "findString": "<<elseif $cow gte 3 or $wolfgirl gte 3 or $cat gte 3 or $fox gte 3>>",
+          "replace": "<<elseif $cow gte 3 or $wolfgirl gte 3 or $cat gte 3 or $fox gte 3 or $bunny gte 3>>"
+        },
+        {
+          "passage": "Livestock Sleep",
+          "findString": "<<elseif $cow gte 2 or $wolfgirl gte 2 or $cat gte 2 or $fox gte 2>>",
+          "replace": "<<elseif $cow gte 2 or $wolfgirl gte 2 or $cat gte 2 or $fox gte 2 or $bunny gte 2>>"
+        },
+        {
+          "passage": "Livestock Sleep",
+          "findString": "<<elseif $cow gte 1 or $wolfgirl gte 1 or $cat gte 1 or $fox gte 1>>",
+          "replace": "<<elseif $cow gte 1 or $wolfgirl gte 1 or $cat gte 1 or $fox gte 1 or $bunny gte 1>>"
+        },
+        {
+          "passage": "Widgets Forest",
+          "findString": "成熟的苹果挂在树枝上。",
+          "replace": "稚嫩的三叶草在风中轻轻摇曳，成熟的红苹果在树上摇摇欲坠。"
+        },
+        {
+          "passage": "Widgets Forest",
+          "findString": "<<icon \"tending/apple.png\">>",
+          "replace": "<<icon \"tending/clover.png\">> <<link [[摘取三叶草 (0:10)|Forest Clover]]>><<pass 10>><</link>>\n\t<br><<icon \"tending/apple.png\">>"
+        },
+        {
+          "passage": "Robin Fox",
+          "findString": "<<robinoptions>>",
+          "replaceFile": "game/overworld-town/special-robin/Kmain.txt"
+        },
+        {
+          "passage": "Widgets Robin",
+          "findString": "<<if _robin.lovestage gte 3 and _robin.trauma lte 20>>",
+          "replaceFile": "game/overworld-town/special-robin/Kwidgets.txt"
+        },
+        {
+          "passage": "Widgets Effects Man",
+          "findString": "你的高跟鞋增强了打击力！",
+          "replace": "你的高跟鞋增强了打击力！\n<<defiance 1 $feettarget>>\n\t<<elseif $transformationParts.traits.strongFeet isnot \"disabled\">>\n你的兔脚增强了打击力！"
+        },
+        {
+          "passage": "Meadow Chase",
+          "findString": "<<elseif $physiquesize lte 10000>>",
+          "replace": "<<elseif $bunny gte 4>>\n\t<<link [[Burrow|Meadow Squeeze]]>><<transform bunny 1>><<endevent>><</link>>\n<<elseif $physiquesize lte 10000>>"
+        },
+        {
+          "passage": "Meadow Squeeze",
+          "findString": "你四肢着地，稍微挖了几下就很容易地就钻进了洞里。你越深入洞内，隧道就越宽。",
+          "replace": "你四肢着地，稍微挖了几下就很容易地就钻进了洞里。你越深入洞内，隧道就越宽。\n<<elseif $bunny gte 4>>\n你四肢着地，稍微挖了几下就很容易地就钻进了洞里。你越深入洞内，隧道就越宽。"
+        },
+        {
+          "passage": "Meadow",
+          "findRegex": "<br>\n\t<<farmicon>>",
+          "replace": "<<icon \"tending/clover.png\">> <<link [[寻找三叶草(0:10)|Meadow Clover]]>><<pass 10>><</link>>\n\t<br>\n\t<<farmicon>>"
+        },
+        {
+          "passage": "Statistics",
+          "findString": "天使化：<<print Math.trunc($angelbuild)>>",
+          "replace": "兔化: <<print Math.trunc($bunnybuild)>> (30+ 完成变形)\n\t<br>\n\tBunny manifestation: <<print Math.trunc($bunny)>>\n\t<br>\n\t天使化：<<print Math.trunc($angelbuild)>>"
+        },
+        {
+          "passage": "Traits",
+          "findRegex": "text: '你有一种舔舐奶油的冲动。身上带着淫秽液体跳舞时会解锁“理毛”动作，同时你的耳朵和尾巴也使你更显眼。',\n\t\t\t\t},\n\t\t\t\t{",
+          "replaceFile": "game/base-system/overlays/K1traits.txt"
+        },
+        {
+          "passage": "Traits",
+          "findString": "text: \"你渴望将他人财物据为己有，这将加强诡术能力。毛茸茸的耳朵和大尾巴使你更加诱人，且更具魅力。\",",
+          "replaceFile": "game/base-system/overlays/K2traits.txt"
+        },
+        {
+          "passage": "Farm Kennel",
+          "findRegex": "<<else>>\n\n\t\t一只<<beasttype>>抬起头来。很快，整个狗窝都看向了你。",
+          "replace": "<<elseif $bunny gte 5>>\n\t不需要很长时间，第一个<<beasttype>>注意到你。你的兔子气味肯定暴露了你的存在。\n\t<br><br>\n\t<<kennel_intro>>\n\t<br><br>\n\t<<else>>\n\t一只<<beasttype>>抬起头来。很快，整个狗窝都看向了你。"
+        }
+      ]
+    },
+    {
+      "modName": "ModLoader DoL ImageLoaderHook",
+      "addonName": "ImageLoaderAddon",
+      "modVersion": "2.0.0"
+    },
+     {
+      "modName": "ReplacePatcher",
+      "addonName": "ReplacePatcherAddon",
+      "modVersion": "1.0.0",
+      "params": {
+      "js": [
+          {
+            "fileName": "pregnancy-types.js",
+            "from": "if (V.fox >= 6) return \"fox\";",
+            "to": "if (V.fox >= 6) return \"fox\";if (V.bunny >= 6) return \"bunny\";"
+          },
+          {
+            "fileName": "story-functions.js",
+            "from": "if (V.fox >= 2) minArousal += Math.clamp(V.foxbuild, 0, 100) * 10 * (2 - risk);",
+            "to": "if (V.fox >= 2) minArousal += Math.clamp(V.foxbuild, 0, 100) * 10 * (2 - risk);if (V.bunny >= 2) minArousal += Math.clamp(V.bunnybuild, 0, 100) * 10 * (2 - risk);"
+          },
+          {
+            "fileName": "story-functions.js",
+            "from": "if (V.fox >= 2) minArousal += Math.clamp(V.foxbuild, 0, 100) * 10;",
+            "to": "if (V.fox >= 2) minArousal += Math.clamp(V.foxbuild, 0, 100) * 10;if (V.bunny >= 2) minArousal += Math.clamp(V.bunnybuild, 0, 100) * 10;"
+          },
+          {
+            "fileName": "canvasmodel-editor.js",
+            "from": "selectOption(\"fox_cheeks_type\", [\"disabled\", \"hidden\", \"default\"]),",
+            "to": "selectOption(\"fox_cheeks_type\", [\"disabled\", \"hidden\", \"default\"]),selectOption(\"bunny_tail_type\", [\"disabled\", \"hidden\", \"default\", \"fluffy\"]),selectOption(\"bunny_tail_layer\", [\"front\", \"back\"]),selectOption(\"bunny_ears_type\", [\"disabled\", \"hidden\", \"default\", \"lop\"]),"
+          },
+          {
+            "fileName": "canvasmodel-img.js",
+            "from": "T.modeloptions.fox_cheeks_type = V.transformationParts.fox.cheeks;",
+            "to": "T.modeloptions.fox_cheeks_type = V.transformationParts.fox.cheeks;T.modeloptions.bunny_tail_type = V.transformationParts.bunny.tail;T.modeloptions.bunny_tail_layer = V.taillayer;T.modeloptions.bunny_ears_type = V.transformationParts.bunny.ears;"
+          },
+          {
+            "fileName": "feats.js",
+            "from": "Angel: {",
+            "to": "Bunny: {title: \"Bnuuy Syndrome\",desc: \"Instead of brain there is bnuuy\",difficulty: 1,series: \"\",filter: [\"All\", \"Transformation\"],},Angel: {"
+          }
+        ]
+      }
+    },
+    {
+      "modName": "ModdedClothesAddon",
+      "addonName": "ModdedClothesAddon",
+      "modVersion": "^1.1.0",
+      "params": {
+        "clothes": [
+          {
+            "key": "head",
+            "filePath": "clothes/head.json"
+          },
+          {
+            "key": "neck",
+            "filePath": "clothes/neck.json"
+          }
+        ]
+      }
+    },
+    {
+      "modName": "ConflictChecker",
+      "addonName": "ConflictCheckerAddon",
+      "modVersion": "^1.0.0",
+      "params": {
+        "optionalBefore": [
+          {
+            "modName": "ModI18N",
+            "version": ">=5.0.0"
+          }
+        ],
+        "optionalAfter": [
+          {
+            "modName": "GameOriginalImagePack",
+            "version": ">=1.0.0"
+          }
+        ]
+      }
+    }
+  ],
+  "dependenceInfo": [
+    {
+      "modName": "ModdedClothesAddon",
+      "version": "^1.1.0"
+    },
+    {
+      "modName": "ModLoader",
+      "version": ">=2.5.2"
+    },
+    {
+      "modName": "ModLoader DoL ImageLoaderHook",
+      "version": ">=2.10.8"
+     },
+    {
+      "modName": "TweeReplacer",
+      "version": ">=1.0.0"
+    },
+     {
+      "modName": "ReplacePatcher",
+      "version": ">=1.0.0"
+    },
+    {
+      "modName": "ConflictChecker",
+      "version": "^1.2.0"
+    }
+  ]
+}

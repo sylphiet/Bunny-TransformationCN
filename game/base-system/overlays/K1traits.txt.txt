@@ -1,0 +1,9 @@
+text: '你有一种舔舐奶油的冲动。身上带着淫秽液体跳舞时会解锁“理毛”动作，同时你的耳朵和尾巴也使你更显眼。',
+				},
+				{
+					name: "Bunny <<girl>>",
+					colour: "grey",
+					has: $bunny gte 6,
+					text: 'Your submissiveness increases over time. Your ears and tail make you more conspicuous.',
+				},
+				{

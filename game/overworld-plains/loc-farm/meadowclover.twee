@@ -1,0 +1,15 @@
+:: Meadow Clover
+<<effects>>
+
+<<if $rng gte 60>> 你没能幸运地找到一片三叶草，但散步很放松。
+    <<stress -1>>
+    <br><br>
+    <<link [[继续|Meadow]]>><</link>>
+<<else>> 你找到了一片三叶草。于是试着找找四叶草，但是没有找到。
+    <<transform bunny 1>>
+    <br><br>
+    <<link [[继续|Meadow]]>><</link>>
+<</if>>
+
+/* Add a chance for a rabbit/bunny to attack you which will increase tf points +1 IIRC I decided to make the four leaf clover event love interest exclusive but I'll ask discord what
+they think. - 2/4/2024 WinterPeach*/

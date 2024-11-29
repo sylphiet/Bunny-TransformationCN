@@ -1,0 +1,8 @@
+
+<<widget "bunny">>
+    <<if $statdisable is "f">> |
+	   <span class="pink"><<print ($player.gender_appearance is "m" ? "Bunnyboy" : "Bunnygirl")>></span>
+	<</if>>
+<</widget>>
+
+<<widget "angel">>

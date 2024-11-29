@@ -1,0 +1,19 @@
+text: "你渴望将他人财物据为己有，这将加强诡术能力。毛茸茸的耳朵和大尾巴使你更加诱人，且更具魅力。",
+},
+				{
+					name: "Prey Animal",
+					colour: "def",
+					has: $transformationParts.traits.preyAnimal isnot "disabled",
+					text: "你是食草动物。",
+				},
+				{
+				    name: "Predatory Animal",
+					colour: "def",
+					has: $transformationParts.traits.predatoryAnimal isnot "disabled",
+					text: "你是食肉动物",
+				},
+				{
+					name: "Strong Feet",
+					colour: "def",
+					has: $transformationParts.traits.strongFeet isnot "disabled",
+					text: "你的轻盈和敏捷使躲闪更容易，踢腿更有效。+15%舞蹈和+15%运动。",
