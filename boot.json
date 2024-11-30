@@ -1,17 +1,13 @@
 {
   "name": "BunnyTransformation",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "styleFileList": [
   ],
   "scriptFileList": [
    "game/04-Variables/canvasmodel-main.js"
   ],
   "tweeFileList": [
-   "game/base-system/mirror.twee",
-   "game/base-system/transformations.twee",
-   "game/base-system/overlays/characteristics.twee",
-   "game/overworld-forest/loc-lake/ivory/schism.twee",
-   "game/overworld-plains/loc-farm/meadowclover.twee"
+    "game/overworld-plains/loc-farm/meadowclover.twee"
   ],
   "imgFileList": [
     "img/clothes/head/carrotpin/full.png",
@@ -51,8 +47,8 @@
       "params": [
         {
           "passage": "gameStartOnly",
-          "findString": "<<set $seductionskill to 0>>",
-          "replace": "<<set $bunnybuild to 0>>\n<<set $bunny to 0>>\n\n<<set $seductionskill to 0>>"
+          "findString": "<<set $stray_happiness to 50>>",
+          "replace": "<<set $stray_happiness to 50>>\n\t<<set $bunnybuild to 0>>\n\t<<set $bunny to 0>>"
         },
         {
           "passage": "Widgets variablesStatic",
@@ -61,13 +57,18 @@
         },
         {
           "passage": "Widgets variablesVersionUpdate",
-          "findString": "<<if $cat gte 1 or $wolfgirl gte 1 or $cow gte 1 or $harpy gte 1>>",
-          "replace": "<<if $cat gte 1 or $wolfgirl gte 1 or $cow gte 1 or $harpy gte 1 or $bunny gte 1>>"
+          "findString": "<<set $physicalTransform to 1>>",
+          "replace": "<<if $cat gte 1 or $wolfgirl gte 1 or $cow gte 1 or $harpy gte 1 or $bunny gte 1>>\n\t\t<<set $physicalTransform to 1>>"
         },
         {
           "passage": "Widgets variablesVersionUpdate",
-          "findString": "<<widget \"backComp\">>",
-          "replaceFile": "game/04-Variables/Kvariables-versionUpdate.txt"
+          "findString": "<!-- v0.3.12.4 $daily object -->",
+          "replace": "<<if $bunnybuild is undefined or $bunnybuild is NaN>>\n\t\t<<set $bunnybuild to 0>>\n\t\t<<set $bunny to 0>>\n\t<</if>>\n    <<if $transformationParts.bunny is undefined>>\n        <<set $transformationParts.bunny to {ears:\"disabled\", tail:\"disabled\"}>>\n            <<if $bunny gte 1>>\n                <<set $transformationParts.bunny.ears to \"default\">>\n                <<set $transformationParts.bunny.tail to \"default\">>\n\t\t\t<</if>>\n            <</if>>\n\n\t<<if $transformationParts.traits.fangs is undefined or $transformationParts.traits.sharpEyes is undefined or $transformationParts.traits.mateForLife is undefined or $transformationParts.traits.preyAnimal is undefined or $transformationParts.strongFeet is undefined or $transformationParts.traits.predatoryAnimal is undefined>>\n\t\t<<set $transformationParts.traits to {fangs:\"disabled\", sharpEyes:\"disabled\", mateForLife:\"disabled\", preyAnimal:\"disabled\", strongFeet:\"disabled\", predatoryAnimal:\"disabled\"}>>\n\t\t<<if $wolfgirl gte 1 or $cat gte 1 or $fox gte 1>>\n\t\t\t<<set $transformationParts.traits.fangs to \"default\">>\n\t\t<</if>>\n\t\t<<if $cat gte 1 or $harpy gte 1 or $fox gte 1 >>\n\t\t\t<<set $transformationParts.traits.sharpEyes to \"default\">>\n\t\t<</if>>\n\t\t<<if $harpy gte 1 or $fox gte 1>>\n\t\t\t<<set $transformationParts.mateForLife to \"default\">>\n\t\t<</if>>\n\t\t<<if $wolfgirl gte 1 or $harpy gte 1 or $cat gte 1 or $fox gte 1>>\n\t\t    <<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t<</if>>\n\t\t<<if $bunny gte 1>>\n\t\t\t<<set $transformationParts.traits.preyAnimal to \"default\">>\n\t\t\t<<set $transformationParts.traits.strongFeet to \"default\">>\n\t\t<</if>>\n\t<</if>>\n\n\t<!-- v0.3.12.4 $daily object -->"
+        },
+        {
+          "passage": "Widgets variablesVersionUpdate",
+          "findString": "<<set $options.tanImgEnabled to true>>\n\t<</if>>\n<</widget>>",
+          "replace": "<<set $options.tanImgEnabled to true>>\n\t<</if>>\n<</widget>>\n\n\t<<if $tfearshatposition is undefined>>\n\t\t<<set $tfearshatposition to \"under\">>\n\t<</if>>"
         },
         {
           "passage": "Widgets Clothing Caption",
@@ -150,11 +151,6 @@
           "replace": "<<set $_changeReduction to $foxbuild>>\n<<elseif $bunny gte 2>>\n\t<<set $_changeReduction to $bunnybuild>>"
         },
         {
-          "passage": "Forest Lily Pick",
-          "findString": "<</link>>",
-          "replaceFile": "game/overworld-forest/loc-forest/Kevents.txt"
-        },
-        {
           "passage": "Livestock Sleep",
           "findString": "<<if $cow gte 6 or $wolfgirl gte 6 or $cat gte 6 or $fox gte 6>>",
           "replace": "<<if $cow gte 6 or $wolfgirl gte 6 or $cat gte 6 or $fox gte 6 or $bunny gte 6>>"
@@ -195,19 +191,14 @@
           "replace": "<<icon \"tending/clover.png\">> <<link [[摘取三叶草 (0:10)|Forest Clover]]>><<pass 10>><</link>>\n\t<br><<icon \"tending/apple.png\">>"
         },
         {
-          "passage": "Robin Fox",
-          "findString": "<<robinoptions>>",
-          "replaceFile": "game/overworld-town/special-robin/Kmain.txt"
-        },
-        {
           "passage": "Widgets Robin",
           "findString": "<<if _robin.lovestage gte 3 and _robin.trauma lte 20>>",
           "replaceFile": "game/overworld-town/special-robin/Kwidgets.txt"
         },
         {
           "passage": "Widgets Effects Man",
-          "findString": "你的高跟鞋增强了打击力！",
-          "replace": "你的高跟鞋增强了打击力！\n<<defiance 1 $feettarget>>\n\t<<elseif $transformationParts.traits.strongFeet isnot \"disabled\">>\n你的兔脚增强了打击力！"
+          "findString": "<</if>>\n\t\t\t\t<</if>>\n\t\t\t<<else>>\n\t\t\t\t<<actionskick $feettarget>><<defiance 5 $feettarget>><<set $attackstat += 1>>\n\t\t\t\t<<if $worn.feet.type.includes(\"heels\")>>\n\t\t\t\t\t你的高跟鞋增强了打击力！",
+          "replace": "\n\t\t\t\t\t<<elseif $transformationParts.traits.strongFeet isnot \"disabled\">>\n\t\t\t\t\t你的兔脚增强了打击力！\n\t\t\t\t\t\t<<defiance 1 $feettarget>><</if>>\n\t\t\t\t<</if>>\n\t\t\t<<else>>\n\t\t\t\t<<actionskick $feettarget>><<defiance 5 $feettarget>><<set $attackstat += 1>>\n\t\t\t\t<<if $worn.feet.type.includes(\"heels\")>>\n\t\t\t\t\t你的高跟鞋增强了打击力！\n\t\t\t\t\t<<defiance 1 $feettarget>>\n\t\t\t\t<<elseif $transformationParts.traits.strongFeet isnot \"disabled\">>\n\t\t\t\t你的兔脚增强了打击力！"
         },
         {
           "passage": "Meadow Chase",
@@ -243,6 +234,201 @@
           "passage": "Farm Kennel",
           "findRegex": "<<else>>\n\n\t\t一只<<beasttype>>抬起头来。很快，整个狗窝都看向了你。",
           "replace": "<<elseif $bunny gte 5>>\n\t不需要很长时间，第一个<<beasttype>>注意到你。你的兔子气味肯定暴露了你的存在。\n\t<br><br>\n\t<<kennel_intro>>\n\t<br><br>\n\t<<else>>\n\t一只<<beasttype>>抬起头来。很快，整个狗窝都看向了你。"
+        },
+        {
+          "passage": "Widgets Mirror",
+          "findString": "<<else>><<tficon \"angel\">>",
+          "replace": "<<elseif $bunny gte 6>><<tficon \"bunny\">>\n\t\t\t<<else>><<tficon \"angel\">>"
+        },
+        {
+          "passage": "Widgets Mirror",
+          "findString": "<<if $angel gte 6>>",
+          "replace": "<<if $bunny gte 6>>\n\t\t\t兔化\n\t\t\t<br>\n\t\t<</if>>\n\t\t<<if $angel gte 6>>"
+        },
+        {
+          "passage": "Widgets Mirror",
+          "findString": "狐化\n\t\t\t<br>\n\t\t<</if>>\n\t\t<<if $angel gte 6>>\n\t\t\t天使化",
+          "replace": "狐化\n\t\t\t<br>\n\t\t<</if>>\n\t\t<<if $bunny gte 6>>\n\t\t\t兔化\n\t\t\t<br>\n\t\t<</if>>\n\t\t<<if $angel gte 6>>\n\t\t\t天使化"
+        },
+        {
+          "passage": "Widgets Mirror",
+          "findString": "<<set _traits to $transformationParts.traits>>",
+          "replace": "<<set _bunny to $transformationParts.bunny>>\n\t<<set _traits to $transformationParts.traits>>"
+        },
+        {
+          "passage": "Widgets Mirror",
+          "findString": "<</listbox>>\n\t\t\t\t\t\t\t<<gencolourselector \"_demon.horns_colour\">>",
+          "replace": "<<option \"Antlers\" \"antlers\">>\n\t\t\t\t\t\t\t<</listbox>>\n\t\t\t\t\t\t\t<<gencolourselector \"_demon.horns_colour\">>"
+        },
+        {
+          "passage": "Widgets Mirror",
+          "findString": "<<set $_chimeraOptions to {",
+          "replaceFile": "game/base-system/Kmirror.txt"
+        },
+        {
+          "passage": "Widgets Mirror",
+          "findString": "<<if ![\"demon\", \"cat\", \"cow\", \"wolf\", \"bird\", \"fox\"].every(transform => T[transform].tail is \"disabled\")>>",
+          "replace": "<<if ![\"demon\", \"cat\", \"cow\", \"wolf\", \"bird\", \"fox\", \"bunny\"].every(transform => T[transform].tail is \"disabled\")>>"
+        },
+        {
+          "passage": "Widgets Schism",
+          "findString": "<<set $trauma to 200>>",
+          "replace": "<<set $trauma to 200>>\n\t<<set $control to 500>>\n\t<<set $angel to 3>>\n\t<<set $angelbuild to 100>>\n\t<<set $demon to 0>>\n\t<<set $wolfgirl to 0>>\n\t<<set $cat to 0>>\n\t<<set $cow to 0>>\n\t<<set $harpy to 0>>\n\t<<set $fox to 0>>\n\t<<hideTransformations>>\n\t<<set $skulduggery to 0>>"
+        },
+        {
+          "passage": "Widgets Schism",
+          "findString": "<<exit>>\n\t<</if>>",
+          "replaceFile":"game/overworld-forest/loc-lake/ivory/Kschism.txt"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "traits: {fangs:\"disabled\", sharpEyes:\"disabled\", mateForLife:\"disabled\", flaunting:\"disabled\"},",
+          "replace":"traits: {fangs:\"disabled\", sharpEyes:\"disabled\", mateForLife:\"disabled\", flaunting:\"disabled\", preyAnimal:\"disabled\", strongFeet:\"disabled\", predatoryAnimal:\"disabled\"},"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "fox: {ears:\"disabled\", tail:\"disabled\", cheeks:\"disabled\"},",
+          "replace":"fox: {ears:\"disabled\", tail:\"disabled\", cheeks:\"disabled\"},\n\t\t\tbunny: {ears:\"disabled\", tail:\"disabled\"},"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<if $cow gte 6>>\n\t\t\t\t<<set $transformationParts.cow.tail to \"default\">>\n\t\t\t<</if>>",
+          "replace":"<<if $cow gte 6>>\n\t\t\t\t<<set $transformationParts.cow.tail to \"default\">>\n\t\t\t<</if>>\n\t\t\t<<if $bunny gte 3>>\n\t\t\t\t<<set $transformationParts.bunny.ears to \"default\">>\n\t\t\t<</if>>\n\t\t\t<<if $bunny gte 5>>\n\t\t\t\t<<set $transformationParts.bunny.tail to \"default\">>\n\t\t\t<</if>>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<if $transformationParts.traits is undefined>>",
+          "replace":"<<if $transformationParts.bunny is undefined>>\n\t\t<<set $transformationParts.bunny to {ears:\"disabled\", tail:\"disabled\"}>>\n\t<</if>>\n\t<<if $transformationParts.traits is undefined>>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<</if>>\n\t/* Setup chimera's config */",
+          "replace":"<<if $cat gte 2 or $harpy gte 2 or $fox gte 2 or $wolfgirl gte 2>>\n\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t<</if>>\n\t<</if>>\n\t<<if $transformationParts.bunny is undefined>>\n\t\t<<set $transformationParts.traits.bunny to {preyAnimal:\"disabled\", strongFeet:\"disabled\"}>>\n\t<</if>>\n\t/* Setup chimera's config */"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<case \"angel\">> <<set $angelbuild = Math.clamp($angelbuild + _args[1], 0, 100)>>",
+          "replace":"<<case \"bunny\">> <<set $bunnybuild  = Math.clamp($bunnybuild   + _args[1], 0, 100)>>\n\t\t\t<<case \"angel\">> <<set $angelbuild = Math.clamp($angelbuild + _args[1], 0, 100)>>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<set $foxbuild = Math.clamp($foxbuild - _args[1], 0, 100)>>\n\t\t<</if>>",
+          "replace":"<<set $foxbuild = Math.clamp($foxbuild - _args[1], 0, 100)>>\n\t\t<</if>>\n\t\t<<if _args[0] isnot \"bunny\" and $worn.head.name isnot \"carrot pin\">>\n\t\t\t<<set $bunnybuild = Math.clamp($bunnybuild - _args[1], 0, 100)>>\n\t\t<</if>>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<if $wolfgirl gte 6>>\n\t\t<<def 5>>\n\t<</if>>\n\n\t<<transformationAlteration>>",
+          "replace":"<<if $bunnybuild gte 1 and $worn.head.name isnot \"carrot pin\" and playerNormalPregnancyType() isnot \"bunny\">>\n\t\t<<transform bunny -1>>\n\t<</if>>\n\n\t<<if $wolfgirl gte 6>>\n\t\t<<def 5>>\n\t<</if>>\n\n\t<<if $bunnybuild gte 6>>\n\t\t<<sub 5>>\n\t<</if>>\n\n\t<<transformationAlteration>>\n\n\t<<if $cat gt 0 or $wolfgirl gt 0 or $cow gt 0 or $harpy gt 0 or $fox gt 0 or $bunny gt 0>>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<earnFeat \"Wolf\">>",
+          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t\t\t\t<<earnFeat \"Wolf\">>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<foxTransform $fox>>",
+          "replace":"<<foxTransform $fox>>\n\t\t<<elseif ($bunnybuild gte 5 and $physicalTransform isnot 1) or ($bunny gte 1 and $physicalTransform is 1)>>\n\t\t    <<bunnyTransform $bunny>>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<set $wolfgirl to 5>>\n\t\t\t\t\t<<set $transformationParts.wolf.tail to \"disabled\">>",
+          "replace":"<<set $wolfgirl to 5>>\n\t\t\t\t\t<<set $transformationParts.wolf.tail to \"disabled\">>\n\t\t\t\t\t<<set $tansformationParts.traits.predatoryAnimal to \"disabled\">>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<set $wolfbuild to 0>>\n\t\t\t\t<<set $transformationParts.traits.fangs to \"disabled\">>",
+          "replace":"<<set $wolfbuild to 0>>\n\t\t\t\t<<set $transformationParts.traits.fangs to \"disabled\">>\n\t\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<set $wolfbuild to 100>>\n\t\t<<set $transformationParts.traits.fangs to \"default\">>",
+          "replace":"<<set $wolfbuild to 100>>\n\t\t<<set $transformationParts.traits.fangs to \"default\">>\n\t\t<<set $transformationParts.traits.predatoryAnimal to \"deafult\">>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<set $transformationParts.cat.tail to \"default\">>\n\t\t\t\t\t<<earnFeat \"Neko\">>",
+          "replace":"<<set $transformationParts.cat.tail to \"default\">>\n\t\t\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t\t\t\t<<earnFeat \"Neko\">>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<set $transformationParts.cat.heterochromia to \"disabled\">>",
+          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t\t<<set $transformationParts.cat.heterochromia to \"disabled\">>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<set $transformationParts.cat.ears to \"disabled\">>\n\t\t\t\t<<set $transformationParts.cat.tail to \"disabled\">>",
+          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t<<set $transformationParts.cat.ears to \"disabled\">>\n\t\t\t\t<<set $transformationParts.cat.tail to \"disabled\">>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<set $transformationParts.cat.ears to \"default\">>\n\t\t<<set $transformationParts.cat.tail to \"default\">>",
+          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t<<set $transformationParts.cat.ears to \"default\">>\n\t\t<<set $transformationParts.cat.tail to \"default\">>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<br><br>\n\t\t\t\t<<elseif $birdbuild lt 25>>",
+          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t\t\t\t<br><br>\n\t\t\t\t<<elseif $birdbuild lt 25>>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<set $transformationParts.fallenAngel.wings to \"default\">>\n\t\t\t\t\t<</if>>\n\t\t\t\t\t<br><br>",
+          "replace":"<<set $transformationParts.fallenAngel.wings to \"default\">>\n\t\t\t\t\t<</if>>\n\t\t\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t\t<br><br>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<if ![\"hidden\", \"disabled\"].includes($transformationParts.bird.wings)>>",
+          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t<<if ![\"hidden\", \"disabled\"].includes($transformationParts.bird.wings)>>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<if ![\"hidden\", \"disabled\"].includes($transformationParts.angel.wings)>>",
+          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t<<if $transformationParts.angel.wings is \"default\">>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<earnFeat \"Fox\">>",
+          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t\t\t\t<<earnFeat \"Fox\">>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<set $transformationParts.fox.tail to \"disabled\">>\n\t\t\t\t\t<br><br>",
+          "replace":"<<set $transformationParts.fox.tail to \"disabled\">>\n\t\t\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t\t<br><br>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<set $transformationParts.traits.mateForLife to \"disabled\">>\n\t\t\t\t<<set $transformationParts.fox.cheeks to \"disabled\">>",
+          "replace":"<<set $transformationParts.traits.mateForLife to \"disabled\">>\n\t\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t<<set $transformationParts.fox.cheeks to \"disabled\">>"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<set $transformationParts.fox.cheeks to \"default\">>\n\t\t<<set $transformationParts.fox.ears to \"default\">>\n\t\t<<set $transformationParts.fox.tail to \"default\">>",
+          "replaceFile":"game/base-system/Ktransformations.txt"
+        },
+        {
+          "passage": "Transformation Widgets",
+          "findString": "<<foxTransform 99>>\n<</widget>>",
+          "replace":"<<foxTransform 99>>\n\t<<bunnyTransform 99>>\n<</widget>>"
+        },
+        {
+          "passage": "Characteristics",
+          "findString": "<<elseif $wolfgirl gte 6 or $cat gte 6 or $cow gte 6 or $harpy gte 6 or $fox gte 6>>",
+          "replace":"<<elseif $wolfgirl gte 6 or $cat gte 6 or $cow gte 6 or $harpy gte 6 or $fox gte 6 or $bunny gte 6>>"
+        },
+        {
+          "passage": "Characteristics",
+          "findString": "<<elseif $cow gte 6>>",
+          "replace":"<<elseif $bunny gte 6 and $demon gte 6>>\n\t\t恶魔兔\n\t\t<<elseif $bunny gte 6 and $angel gte 6>>\n\t\t月兔\n\t\t<<elseif $bunny gte 6>>\n\t\t兔子\n\t\t<<elseif $cow gte 6>>"
+        },
+        {
+          "passage": "Characteristics",
+          "findString": "<<if $fox gte 6>>",
+          "replace":"<<if $transformationParts.traits.strongFeet isnot \"disabled\">>\n\t\t\t\t\t<<set _dancingConfig.modifier to Math.floor(_dancingConfig.modifier * 1.15)>>\n\t\t\t\t\t<<set _dancingConfig.modTypes.good.pushUnique(\"strong feet\")>>\n\t\t\t\t\t<<set _athleticsConfig.modifier to Math.floor(_athleticsConfig.modifier * 1.15)>>\n\t\t\t\t\t<<set _athleticsConfig.modTypes.good.pushUnique(\"strong feet\")>>\n\t\t\t\t<</if>>\n\t\t\t\t<<if $fox gte 6>>"
+        },
+        {
+          "passage": "Characteristics",
+          "findString": "<<if $wolfgirl gte 2 or $cat gte 2 or $cow gte 2 or $fox gte 2>>",
+          "replace":"<<if $wolfgirl gte 2 or $cat gte 2 or $cow gte 2 or $fox gte 2 or $bunny gte 2>>"
         }
       ]
     },
