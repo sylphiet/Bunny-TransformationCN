@@ -1,6 +1,6 @@
 
 		<!-- Animal TF tips -->
 		<<set setup.tips.animalTFs to [
-			"Ingesting wolf,<<if $bestialitydisable is \"t\">>person<</if>> fox<<if $bestialitydisable is \"t\">>person<</if>> or bunny <<if $bestialitydisable is \"t\">>person<</if>> cum can have strange effects on the body.",
-			"Never try to out-scream a fox<<if $bestialitydisable is \"t\">>person<</if>>.",
+			"吞下狼、狐狸或兔子的精液会对身体产生奇怪的影响。",
+			"永远不要试图和狐狸争吵",
 		]>>

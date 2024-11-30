@@ -13,3 +13,23 @@
 
 /* Add a chance for a rabbit/bunny to attack you which will increase tf points +1 IIRC I decided to make the four leaf clover event love interest exclusive but I'll ask discord what
 they think. - 2/4/2024 WinterPeach*/
+
+:: Forest Clover
+<<effects>>
+你跪下来，开始梳理头发。<<lstress>>
+<<transform bunny 1>><<stress -1>>
+<br><br>
+<<link [[Next|Forest]]>><<set $eventskip to 1>><</link>>
+
+
+:: Robin Bunny
+<<set $outisde to 0>><<set $location to "home">><<effects>>
+
+感觉一种突如其来的冲动，你转向罗宾，把头靠在他身上<<his>>.
+<<if $robin.timer.hurt gte 1>>
+罗宾犹豫了一会儿，然后把你的头从他身上移开 <<him>>.
+<<else>>
+<<He>>当你的耳朵挠他的鼻子时他咯咯地笑。
+<</if>>
+<br><br>
+<<robinoptions>>
