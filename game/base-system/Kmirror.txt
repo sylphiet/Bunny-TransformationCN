@@ -1,0 +1,29 @@
+<div class='tf-bunny'>
+			    <<if $bunny gt 1>>
+					__兔兔__
+					<br>
+					<<if _bunny.ears isnot "disabled">>
+					<div class='tf-part-item'>
+					耳朵:
+					<<listbox "_bunny.ears" autoselect>>
+						<<option "隐藏" "hidden">>
+						<<option "默认" "default">>
+						<<option "垂耳" "lop">>
+						<</listbox>>
+					</div>
+				<</if>>
+				<<if _bunny.tail isnot "disabled">>
+					<div class='tf-part-item'>
+					尾巴:
+					<<listbox "_bunny.tail" autoselect>>
+						<<option "隐藏" "hidden">>
+						<<option "默认" "default">>
+						<<option "毛茸茸" "fluffy">>
+					 <</listbox>>
+			</div>
+			<</if>>
+			<br>
+		<</if>>
+			
+			</div>
+			<<set $_chimeraOptions to {

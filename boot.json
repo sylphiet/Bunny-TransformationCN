@@ -317,7 +317,7 @@
         },
         {
           "passage": "Transformation Widgets",
-          "findString": "<<if $wolfgirl gte 6>>\n\t\t<<def 5>>\n\t<</if>>\n\n\t<<transformationAlteration>>",
+          "findString": "<<if $wolfgirl gte 6>>\n\t\t<<def 5>>\n\t<</if>>\n\n\t<<transformationAlteration>>\n\n\t<<if $cat gt 0 or $wolfgirl gt 0 or $cow gt 0 or $harpy gt 0 or $fox gt 0>>",
           "replace":"<<if $bunnybuild gte 1 and $worn.head.name isnot \"carrot pin\" and playerNormalPregnancyType() isnot \"bunny\">>\n\t\t<<transform bunny -1>>\n\t<</if>>\n\n\t<<if $wolfgirl gte 6>>\n\t\t<<def 5>>\n\t<</if>>\n\n\t<<if $bunnybuild gte 6>>\n\t\t<<sub 5>>\n\t<</if>>\n\n\t<<transformationAlteration>>\n\n\t<<if $cat gt 0 or $wolfgirl gt 0 or $cow gt 0 or $harpy gt 0 or $fox gt 0 or $bunny gt 0>>"
         },
         {

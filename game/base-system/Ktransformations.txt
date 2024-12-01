@@ -1,0 +1,102 @@
+<<set $transformationParts.traits.predatoryAnimal to "default">>
+		<<set $transformationParts.fox.cheeks to "default">>
+		<<set $transformationParts.fox.ears to "default">>
+		<<set $transformationParts.fox.tail to "default">>
+	<</if>>
+<</widget>>
+
+/* <<bunnyTransform step>> If neither is provided, force full transformation */
+<<widget "bunnyTransform">>
+	<<if _args[0] gte 0>>
+		<<switch _args[0]>>
+			<<case 0>>
+			    <<if $bunnybuild gte 5>>
+				    <<set $bunny to 1>>
+				    <<set $physicalTransform to 1>>
+				    <span class="gold">你的腿开始疼痛。</span>
+				    <br><br>
+			    <</if>>
+		    <<case 1>>
+		        <<if $bunnybuild gte 10>>
+			        <<set $bunny to 2>>
+			        <span class="gold">你的腿痛消失了，你感觉更敏捷了。</span>
+			        <<set $transformationParts.traits.strongFeet to "default">>
+			        <br><br>
+		        <<elseif $bunnybuild lt 5>>
+		            <<set $bunny to 0>>
+			        <<set $physicalTransform to 0>>
+			        <span class="gold">您所感受到的痛苦已经消失</span>
+			        <br><br>
+				<</if>>
+			<<case 2>>
+			    <<if $bunnybuild gte 15>>
+					<<set $bunny to 3>>
+					<span class="gold">你的头皮开始发痒。</span>
+					<br><br>
+				<<elseif $bunnybuild lt 10>>
+				    <<set $bunny to 1>>
+					<span class="gold">你走路感觉更沉重了。</span>
+					<<set $transformationParts.traits.strongFeet to "disabled">>
+					<br><br>
+				<</if>>
+			<<case 3>>
+			    <<if $bunnybuild gte 20>>
+					<<set $bunny to 4>>
+					<span class="gold">你有一种挠头的冲动，当你这样做时发现头上多了一对兔子耳朵。你开始时不时扒拉它们。</span>
+					<<set $transformationParts.bunny.ears to "default">>
+					<br><br>
+				<<elseif $bunnybuild lt 15>>
+				    <<set $bunny to 2>>
+					<span class="gold">你的头皮不再发痒。</span>
+					<br><br>
+				<</if>>
+			<<case 4>>
+			    <<if $bunnybuild gte 25>>
+					<<set $bunny to 5>>
+					<span class="gold">你的尾椎上部开始发痒。</span>
+					<br><br>
+				<<elseif $bunnybuild lt 20>>
+				    <<set $bunny to 3>>
+					<span class="gold">你的兔子耳朵不见了</span>
+					<<set $transformationParts.bunny.ears to "disabled">>
+					<br><br>
+				<</if>>
+			<<case 5>>
+			   <<if $bunnybuild gte 30>>
+				    <<set $bunny to 6>>
+					<span class="gold">你感觉到尾椎上方有个肿块，当你去触碰时，你发现那里有一个柔软的兔子尾巴。你享受抚摸它的感觉。</span>
+					<<set $transformationParts.bunny.tail to "default">>
+					<<set $transformationParts.traits.preyAnimal to "default">>
+					<<earnFeat "Bunny">>
+					<br><br>
+				<<elseif $bunnybuild lt 25>>
+				    <<set $bunny to 4>>
+					<span class="gold">你的尾椎上方不再痒。</span>
+					<br><br>
+				<</if>>
+			<<case 6>>
+			    <<if $bunnybuild lt 30>>
+					<<set $bunny to 5>>
+					<span class="gold">你的兔子尾巴不见了。</span>
+					<<set $transformationParts.bunny.tail to "disabled">>
+					<<set $transformationParts.traits.preyAnimal to "disabled">>
+					<br><br>
+				<</if>>
+			<<case 99>>
+			    <<set $physicalTransform to 0>>
+				<<set $bunny to 0>>
+				<<set $bunnybuild to 0>>
+				<<set $transformationParts.traits.preyAnimal to "disabled">>
+				<<set $transformationParts.bunny.ears to "disabled">>
+				<<set $transformationParts.bunny.tail to "disabled">>
+				<<set $transformationParts.traits.strongFeet to "disabled">>
+		<</switch>>
+	<<else>>
+		<<clearAnimalTransformations>>
+		 <<set $physicalTransform to 1>>
+		<<set $bunny to 6>>
+		<<set $bunnybuild to 100>>
+		<<set $transformationParts.traits.preyAnimal to "default">>
+		<<set $transformationParts.bunny.ears to "default">>
+		<<set $transformationParts.bunny.tail to "default">>
+		<<set $transformationParts.traits.strongFeet to "default">>

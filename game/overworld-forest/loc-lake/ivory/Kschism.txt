@@ -1,0 +1,83 @@
+<<exit>>
+	<</if>>
+	/*restore players stats*/
+	<<set $player.sex to $real_playersex>>
+	<<set $player.gender to $real_playergender>>
+	<<set $player.penisExist to $real_penisexist>>
+	<<set $player.vaginaExist to $real_vaginaexist>>
+	<<set $player.ballsExist to $real_ballsexist>>
+	<<if !$player.vaginaExist>>
+		<<set $vaginastate to "none">>
+		<<set $vaginause to "none">>
+	<</if>>
+	<<if !$player.penisExist>>
+		<<set $penisstate to "none">>
+		<<set $penisuse to "none">>
+	<</if>>
+	<<set $wraith.state to $real_wraithState>>
+	<<unset $statFreeze>>
+	<<if $real_lefteyecolour>>
+		<<set $leftEyeColour to $real_lefteyecolour>>
+		<<set $rightEyeColour to $real_righteyecolour>>
+	<<else>>
+		<<set $leftEyeColour to $real_eyecolour>>
+		<<set $rightEyeColour to $real_eyecolour>>
+	<</if>>
+
+	<<set $haircolour to $real_haircolour>>
+	<<set $hairfringecolour to $real_hairfringecolour>>
+	<<set $hairColourStyle to $real_hairColourStyle>>
+	<<set $hairColourGradient to $real_hairColourGradient>>
+	<<set $hairFringeColourStyle to $real_hairFringeColourStyle>>
+	<<set $hairFringeColourGradient to $real_hairFringeColourGradient>>
+
+	<<set $hairlength to $real_hairlength>>
+	<<set $hairtype to $real_hairtype>>
+	<<set $hairlengthstage to $real_hairlenghthstage>>
+	<<set $fringelength to $real_fringelength>>
+	<<set $fringetype to $real_fringetype>>
+	<<set $fringelengthstage to $real_fringelengthstage>>
+	<<set $player.breastsize to $real_breastsize>>
+
+	<<set $player.bodyliquid to clone($real_bodyliquid)>><<goocount>>
+	<<set $parasite to clone($real_parasite)>>
+	<<set $player.virginity to clone($real_virginity)>>
+	<<if $frozenValues>>
+		<<set $arousal to $real_arousal>>
+		<<set $tiredness to $real_tiredness>>
+		<<set $trauma to $real_trauma>>
+	<<else>>
+		<<set $arousal to ($arousal + $real_arousal)>>
+		<<set $tiredness to ($tiredness + $real_tiredness)>>
+		<<set $trauma to ($trauma + $real_trauma)>>
+	<</if>>
+	<<set $stress to $real_stress>>
+	<<set $control to $real_control>>
+	<<set $angel to $real_angel>>
+	<<set $angelbuild to $real_angelbuild>>
+	<<set $demon to $real_demon>>
+	<<set $wolfgirl to $real_wolfgirl>>
+	<<set $cat to $real_cat>>
+	<<set $cow to $real_cow>>
+	<<set $harpy to $real_harpy>>
+	<<set $fox to $real_fox>>
+	<<showTransformations>>
+	<<set $fame to $real_fame>>
+	<<set $sexStats to clone($real_sexStats)>>
+	<<set $skulduggery to $real_skulduggery>>
+	<<set $purity to $real_purity>>
+	<<set $submissive to $real_submissive>>
+	<<set $awareness to $real_awareness>>
+	<<set $awarelevel to $real_awarelevel>>
+	<<set $spray to $real_spray>>
+	<<set $spraymax to $real_spraymax>>
+	<<set $skin to clone($real_skin)>>
+	<<set $skinColor to clone($real_skinColor)>>
+	<<set $real_skinColor to clone($skinColor)>>
+	<<set $condoms to $real_condoms>>
+	<<set $condomLvl to $real_condomLevel>>
+	/*restore location and time*/
+	<<set $location to "lake_ruin">>
+	<<set $moonstate to $real_moonstate>>
+	<<set $timeStamp to $real_timeStamp>>
+	<<run Time.set()>>
