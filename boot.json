@@ -1,6 +1,6 @@
 {
   "name": "BunnyTransformation",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "styleFileList": [
   ],
   "scriptFileList": [
@@ -10,15 +10,41 @@
     "game/overworld-plains/loc-farm/meadowclover.twee"
   ],
   "imgFileList": [
+    "img/clothes/handheld/gohei/right.png",
+    "img/clothes/handheld/gohei/right_cover.png",
     "img/clothes/head/carrotpin/full.png",
+    "img/clothes/head/frogpin/full.png",
+    "img/clothes/lower/moriya shrine skirt/frayed.png",
+    "img/clothes/lower/moriya shrine skirt/full.png",
+    "img/clothes/lower/moriya shrine skirt/tattered.png",
+    "img/clothes/lower/moriya shrine skirt/torn.png",
     "img/clothes/neck/harness/acc_gray.png",
     "img/clothes/neck/harness/full_gray.png",
     "img/clothes/neck/harnessleash/acc.png",
     "img/clothes/neck/harnessleash/full_gray.png",
+    "img/clothes/upper/moriya shrine robes/0.png",
+    "img/clothes/upper/moriya shrine robes/1.png",
+    "img/clothes/upper/moriya shrine robes/2.png",
+    "img/clothes/upper/moriya shrine robes/3.png",
+    "img/clothes/upper/moriya shrine robes/4.png",
+    "img/clothes/upper/moriya shrine robes/5.png",
+    "img/clothes/upper/moriya shrine robes/6.png",
+    "img/clothes/upper/moriya shrine robes/frayed.png",
+    "img/clothes/upper/moriya shrine robes/full.png",
+    "img/clothes/upper/moriya shrine robes/hold.png",
+    "img/clothes/upper/moriya shrine robes/left.png",
+    "img/clothes/upper/moriya shrine robes/left_cover.png",
+    "img/clothes/upper/moriya shrine robes/right.png",
+    "img/clothes/upper/moriya shrine robes/right_cover.png",
+    "img/clothes/upper/moriya shrine robes/tattered.png",
+    "img/clothes/upper/moriya shrine robes/torn.png",
     "img/misc/icon/tf_bunny.png",
     "img/misc/icon/tf_bun_acc.png",
     "img/misc/icon/clothes/carrot_pin.png",
+    "img/misc/icon/clothes/frog_pin.png",
+    "img/misc/icon/clothes/gohei.png",
     "img/misc/icon/clothes/harness.png",
+    "img/misc/icon/clothes/moriya_shrine.png",
     "img/misc/icon/tending/clover.png",
     "img/sex/doggy/active/transformations/bunny/ears/default.png",
     "img/sex/doggy/active/transformations/bunny/ears/default_back.png",
@@ -489,6 +515,18 @@
           {
             "key": "neck",
             "filePath": "clothes/neck.json"
+          },
+          {
+            "key": "upper",
+            "filePath": "clothes/upper.json"
+          },
+          {
+            "key": "lower",
+            "filePath": "clothes/lower.json"
+          },
+          {
+            "key": "handheld",
+            "filePath": "clothes/handheld.json"
           }
         ]
       }
