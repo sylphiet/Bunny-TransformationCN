@@ -1,6 +1,6 @@
 
 		<<if _robin.trauma lt 20 and $bunny gte 6>>
-		    <<ind>><<link [[Head butt (0:20)|Robin Bunny]]>><<pass 20>><<trauma -2>><<stress -2>><<npcincr Robin love 1>><<npcincr Robin dom 1>><<handheldon 1>><</link>><<bunny>><<gdom>><<glove>><<ltrauma>><<lstress>>
+		    <<ind>><<link [[用头撞击 (0:20)|Robin Bunny]]>><<pass 20>><<trauma -2>><<stress -2>><<npcincr Robin love 1>><<npcincr Robin dom 1>><<handheldon 1>><</link>><<bunny>><<gdom>><<glove>><<ltrauma>><<lstress>>
 			<br>
 		<</if>>
 		<<if _robin.lovestage gte 3 and _robin.trauma lte 20>>

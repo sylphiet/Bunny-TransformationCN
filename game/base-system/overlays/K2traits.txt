@@ -16,4 +16,4 @@ text: "你渴望将他人财物据为己有，这将加强诡术能力。毛茸�
 					name: "动如脱兔",
 					colour: "green",
 					has: $transformationParts.traits.strongFeet isnot "disabled",
-					text: "你的轻盈和敏捷使躲闪更容易、踢腿更有效。+15%舞蹈和+15%运动。",
+					text: "你的轻盈和敏捷使躲闪更容易、踢腿更有效。+14%舞蹈和+14%运动。",

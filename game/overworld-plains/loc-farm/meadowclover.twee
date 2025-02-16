@@ -19,7 +19,7 @@ they think. - 2/4/2024 WinterPeach*/
 你跪下来，开始梳理头发。<<lstress>>
 <<transform bunny 1>><<stress -1>>
 <br><br>
-<<link [[Next|Forest]]>><<set $eventskip to 1>><</link>>
+<<link [[继续|Forest]]>><<set $eventskip to 1>><</link>>
 
 
 :: Robin Bunny

@@ -1,66 +1,130 @@
 {
   "name": "BunnyTransformation",
-  "version": "0.2.2",
-  "styleFileList": [
-  ],
+  "version": "0.2.6",
+  "styleFileList": [],
   "scriptFileList": [
-   "game/04-Variables/canvasmodel-main.js"
+    "game/04-Variables/canvasmodel-main.js"
   ],
   "tweeFileList": [
+    "game/base-combat/beast-images.twee",
     "game/overworld-plains/loc-farm/meadowclover.twee"
   ],
   "imgFileList": [
-    "img/clothes/handheld/gohei/right.png",
-    "img/clothes/handheld/gohei/right_cover.png",
-    "img/clothes/head/carrotpin/full.png",
-    "img/clothes/head/frogpin/full.png",
-    "img/clothes/lower/moriya shrine skirt/frayed.png",
-    "img/clothes/lower/moriya shrine skirt/full.png",
-    "img/clothes/lower/moriya shrine skirt/tattered.png",
-    "img/clothes/lower/moriya shrine skirt/torn.png",
-    "img/clothes/neck/harness/acc_gray.png",
-    "img/clothes/neck/harness/full_gray.png",
-    "img/clothes/neck/harnessleash/acc.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/sleeves/back-bound.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/breasts/2.png",
     "img/clothes/neck/harnessleash/full_gray.png",
-    "img/clothes/upper/moriya shrine robes/0.png",
-    "img/clothes/upper/moriya shrine robes/1.png",
-    "img/clothes/upper/moriya shrine robes/2.png",
-    "img/clothes/upper/moriya shrine robes/3.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/sleeves/back-handjob.png",
+    "img/transformations/bunny/earback/lop.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/breasts/1.png",
+    "img/transformations/bunny/earfront/default.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/sleeves/front-bound.png",
+    "game/base-system/overlays/K2traits.txt",
+    "img/sex/missionary/clothing/head/frogpin/full.png",
+    "game/base-system/Ktips.txt",
     "img/clothes/upper/moriya shrine robes/4.png",
-    "img/clothes/upper/moriya shrine robes/5.png",
-    "img/clothes/upper/moriya shrine robes/6.png",
-    "img/clothes/upper/moriya shrine robes/frayed.png",
-    "img/clothes/upper/moriya shrine robes/full.png",
-    "img/clothes/upper/moriya shrine robes/hold.png",
-    "img/clothes/upper/moriya shrine robes/left.png",
-    "img/clothes/upper/moriya shrine robes/left_cover.png",
-    "img/clothes/upper/moriya shrine robes/right.png",
-    "img/clothes/upper/moriya shrine robes/right_cover.png",
-    "img/clothes/upper/moriya shrine robes/tattered.png",
-    "img/clothes/upper/moriya shrine robes/torn.png",
-    "img/misc/icon/tf_bunny.png",
+    "img/img.twee-config.yml",
+    "img/sex/missionary/clothing/head/frogpin/back.png",
+    "clothes/head.json",
+    "img/clothes/head/carrotpin/full.png",
+    "img/clothes/lower/moriya shrine skirt/frayed.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/ankles.png",
     "img/misc/icon/tf_bun_acc.png",
-    "img/misc/icon/clothes/carrot_pin.png",
-    "img/misc/icon/clothes/frog_pin.png",
+    "game/base-system/Ktext.txt",
+    "img/clothes/upper/moriya shrine robes/5.png",
+    "game/overworld-town/special-robin/Kwidgets.txt",
+    "img/transformations/bunny/earfront/lop.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/thighs.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/midriff.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/breasts/0.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/waist.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/breasts/4.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/chest.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/sleeves/front-stroke.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/breasts/4-acc.png",
+    "img/misc/icon/furniture/tfplushes.png",
+    "img/clothes/upper/moriya shrine robes/right_cover.png",
+    "img/misc/icon/furniture/shelf.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/breasts/3-acc.png",
+    "img/clothes/upper/moriya shrine robes/2.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/sleeves/front-default.png",
+    "game/overworld-forest/loc-lake/ivory/Kschism.txt",
+    "img/clothes/handheld/gohei/right.png",
+    "readme.txt",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/sleeves/front-bound.png",
+    "img/sex/doggy/clothing/head/frogpin/full.png",
+    "img/transformations/demon/horns/antlers.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/breasts/2-acc.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/knees.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/sleeves/front-handjob.png",
+    "clothes/neck.json",
+    "img/clothes/upper/moriya shrine robes/torn.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/breasts/4-acc.png",
+    "img/clothes/upper/moriya shrine robes/0.png",
+    "clothes/lower.json",
     "img/misc/icon/clothes/gohei.png",
     "img/misc/icon/clothes/harness.png",
-    "img/misc/icon/clothes/moriya_shrine.png",
-    "img/misc/icon/tending/clover.png",
-    "img/sex/doggy/active/transformations/bunny/ears/default.png",
-    "img/sex/doggy/active/transformations/bunny/ears/default_back.png",
-    "img/sex/doggy/active/transformations/bunny/tail/default.png",
-    "img/sex/missionary/active/transformations/bunny/ears/default.png",
-    "img/sex/missionary/active/transformations/bunny/ears/default_back.png",
-    "img/sex/missionary/active/transformations/bunny/tail/default.png",
-    "img/transformations/bunny/earback/default.png",
-    "img/transformations/bunny/earback/lop.png",
-    "img/transformations/bunny/earfront/default.png",
-    "img/transformations/bunny/earfront/lop.png",
-    "img/transformations/bunny/tail/default.png",
+    "img/clothes/upper/moriya shrine robes/3.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/breasts/0.png",
+    "game/base-system/Kimages.txt",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/breasts/2.png",
+    "game/base-system/Ktransformations.txt",
+    "img/clothes/upper/moriya shrine robes/tattered.png",
+    "img/sex/missionary/body/transformations/bunny/tail/default.png",
+    "img/sex/doggy/body/transformations/bunny/ears/default.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/sleeves/front-stroke.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/neck.png",
     "img/transformations/bunny/tail/fluffy.png",
-    "img/transformations/demon/horns/antlers.png",
-    "img/img.twee-config.yml",
-    "img/misc/icon/icon.twee-config.yml"
+    "img/sex/doggy/clothing/upper/moriya shrine robes/breasts/3-acc.png",
+    "game/base-system/Kmirror.txt",
+    "img/sex/missionary/body/transformations/bunny/ears/default.png",
+    "img/sex/missionary/body/transformations/bunny/ears/default_back.png",
+    "img/misc/icon/clothes/moriya_shrine.png",
+    "img/sex/doggy/body/transformations/bunny/tail/default.png",
+    "img/misc/icon/icon.twee-config.yml",
+    "img/clothes/upper/moriya shrine robes/left.png",
+    "img/clothes/upper/moriya shrine robes/hold.png",
+    "img/clothes/upper/moriya shrine robes/1.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/breasts/2-acc.png",
+    "img/clothes/lower/moriya shrine skirt/torn.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/breasts/3.png",
+    "img/clothes/upper/moriya shrine robes/right.png",
+    "img/clothes/neck/harnessleash/acc.png",
+    "img/clothes/upper/moriya shrine robes/full.png",
+    "img/clothes/lower/moriya shrine skirt/full.png",
+    "img/transformations/bunny/earback/default.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/breasts/4.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/chest.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/breasts/1.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/sleeves/front-default.png",
+    "img/sex/doggy/clothing/head/frogpin/back.png",
+    "img/misc/icon/furniture/bunplushie.png",
+    "img/misc/icon/clothes/frog_pin.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/waist.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/neck.png",
+    "img/clothes/handheld/gohei/right_cover.png",
+    "img/misc/icon/clothes/carrot_pin.png",
+    "img/misc/icon/tf_bunny.png",
+    "clothes/handheld.json",
+    "img/clothes/upper/moriya shrine robes/frayed.png",
+    "img/clothes/upper/moriya shrine robes/left_cover.png",
+    "img/clothes/head/frogpin/full.png",
+    "img/clothes/neck/harness/full_gray.png",
+    "img/clothes/neck/harness/acc_gray.png",
+    "img/clothes/upper/moriya shrine robes/6.png",
+    "img/clothes/lower/moriya shrine skirt/tattered.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/breasts/1-acc.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/sleeves/front-handjob.png",
+    "img/transformations/bunny/tail/default.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/breasts/1-acc.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/midriff.png",
+    "clothes/upper.json",
+    "img/misc/icon/tending/clover.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/sleeves/back-default.png",
+    "game/base-system/overlays/K1traits.txt",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/breasts/3.png",
+    "img/sex/missionary/clothing/upper/moriya shrine robes/knees.png",
+    "img/sex/doggy/body/transformations/bunny/ears/default_back.png",
+    "img/sex/doggy/clothing/upper/moriya shrine robes/sleeves/back-handjob.png"
   ],
   "additionFile": [
     "readme.txt"
@@ -93,8 +157,8 @@
         },
         {
           "passage": "Widgets variablesVersionUpdate",
-          "findString": "<<set $options.tanImgEnabled to true>>\n\t<</if>>\n<</widget>>",
-          "replace": "<<set $options.tanImgEnabled to true>>\n\t<</if>>\n<</widget>>\n\n\t<<if $tfearshatposition is undefined>>\n\t\t<<set $tfearshatposition to \"under\">>\n\t<</if>>"
+          "findString": "<</widget>>",
+          "replace": "<</widget>>\n\n\t<<if $tfearshatposition is undefined>>\n\t\t<<set $tfearshatposition to \"under\">>\n\t<</if>>"
         },
         {
           "passage": "Widgets Clothing Caption",
@@ -103,33 +167,8 @@
         },
         {
           "passage": "Widgets Clothing Caption",
-          "findString": "<<if $fox gte 6>><<set $attractiveness += 750>><</if>>",
-          "replace": "<<if $fox gte 6>><<set $attractiveness += 750>><</if>>\n\t<<if $bunny gte 6>><<set $attractiveness +=500>><</if>>"
-        },
-        {
-          "passage": "Widgets Transformation Img",
-          "findString": "<<img_tf_fox_doggy_idle>>",
-          "replace": "<<img_tf_fox_doggy_idle>>\n\t<<img_tf_bunny_doggy_idle>>"
-        },
-        {
-          "passage": "Widgets Transformation Img",
-          "findString": "<<img_tf_fox_doggy_active>>",
-          "replace": "<<img_tf_fox_doggy_active>>\n\t<<img_tf_bunny_doggy_active>>"
-        },
-        {
-          "passage": "Widgets Transformation Img",
-          "findString": "<<img_tf_fox_miss_idle>>",
-          "replace": "<<img_tf_fox_miss_idle>>\n\t<<img_tf_bunny_miss_idle>>"
-        },
-        {
-          "passage": "Widgets Transformation Img",
-          "findString": "<<img_tf_fox_miss_active>>",
-          "replace": "<<img_tf_fox_miss_active>>\n\t<<img_tf_bunny_miss_active>>"
-        },
-        {
-          "passage": "Widgets Transformation Img",
-          "findString": "<<widget \"img_tf_angel_doggy_idle\">>",
-          "replaceFile": "game/base-system/Kimages.txt"
+          "findString": "<<set $attractiveness -= 225>>\n\t\t<</if>>\n\t<</if>>",
+          "replace": "<<set $attractiveness -= 225>>\n\t\t<</if>>\n\t<</if>>\n\t<<if $bunny gte 6>>\n\t\t<<set $attractiveness += 500>>\n\t\t<<if $transformationParts.bunny.ears is \"hidden\">>\n\t\t\t<<set $attractiveness -= 100>>\n\t\t<</if>>\n\t\t<<if $transformationParts.bunny.tail is \"hidden\">>\n\t\t\t<<set $attractiveness -= 100>>\n\t\t<</if>>\n\t<</if>>"
         },
         {
           "passage": "Widgets Icon Img",
@@ -153,18 +192,18 @@
         },
         {
           "passage": "Cheats",
-          "findString": "<<foxTransform 99>><<updatesidebarimg>><</link>><br>",
-          "replace": "<<foxTransform 99>><<updatesidebarimg>><</link>><br>\n\t<<tficon \"bunny\">>兔兔: <<link \"设置\">><<bunnyTransform>><<updatesidebarimg>><</link>> / <<link \"清除\">><<bunnyTransform 99>><<updatesidebarimg>><</link>><br>"
-        },
-        {
-          "passage": "Cheats",
           "findString": "\"bird\", \"fox\"",
           "replace": "\"bird\", \"fox\", \"bunny\""
         },
         {
           "passage": "Cheats",
-          "findString": "<<set _name to ({\"fallen\":\"堕天使\",\"angel\":\"天使\",\"demon\":\"恶魔\",\"wolf\":\"狼\",\"cat\":\"猫\",\"cow\":\"牛\",\"bird\":\"鸟\",\"fox\":\"狐狸\"})[_tf]>>",
-          "replace": "<<set _name to ({\"fallen\":\"堕天使\",\"angel\":\"天使\",\"demon\":\"恶魔\",\"wolf\":\"狼\",\"cat\":\"猫\",\"cow\":\"牛\",\"bird\":\"鸟\",\"fox\":\"狐狸\",\"bunny\":\"兔兔\"})[_tf]>>"
+          "findString": ",\"fox\":\"狐狸\"",
+          "replace": ",\"fox\":\"狐狸\",\"bunny\":\"兔兔\""
+        },
+        {
+          "passage": "Cheats",
+          "findString": "<<updatesidebarimg>><</link>>\n\t\t</div>",
+          "replace": "<<updatesidebarimg>><</link>><br>\n\t\t\t<<tficon \"bunny\">>兔化: <<link \"设置\">><<bunnyTransform>><<updatesidebarimg>><</link>> / <<link \"清除\">><<bunnyTransform 99>><<updatesidebarimg>><</link>>\n\t\t</div>"
         },
         {
           "passage": "Pregnancy",
@@ -257,11 +296,6 @@
           "replaceFile": "game/base-system/overlays/K2traits.txt"
         },
         {
-          "passage": "Farm Kennel",
-          "findRegex": "<<else>>\n\n\t\t一只<<beasttype>>抬起头来。很快，整个狗窝都看向了你。",
-          "replace": "<<elseif $bunny gte 5>>\n\t不需要很长时间，第一个<<beasttype>>注意到你。你的兔子气味肯定暴露了你的存在。\n\t<br><br>\n\t<<kennel_intro>>\n\t<br><br>\n\t<<else>>\n\t一只<<beasttype>>抬起头来。很快，整个狗窝都看向了你。"
-        },
-        {
           "passage": "Widgets Mirror",
           "findString": "<<else>><<tficon \"angel\">>",
           "replace": "<<elseif $bunny gte 6>><<tficon \"bunny\">>\n\t\t\t<<else>><<tficon \"angel\">>"
@@ -273,8 +307,8 @@
         },
         {
           "passage": "Widgets Mirror",
-          "findString": "狐化\n\t\t\t<br>\n\t\t<</if>>\n\t\t<<if $angel gte 6>>\n\t\t\t天使化",
-          "replace": "狐化\n\t\t\t<br>\n\t\t<</if>>\n\t\t<<if $bunny gte 6>>\n\t\t\t兔化\n\t\t\t<br>\n\t\t<</if>>\n\t\t<<if $angel gte 6>>\n\t\t\t天使化"
+          "findString": "].find(tf => V[tf] > 1)>>\n\t<div class=\"settingsGrid\">",
+          "replace": ", \"兔化\"].find(tf => V[tf] > 1)>>\n\t<div class=\"settingsGrid\">"
         },
         {
           "passage": "Widgets Mirror",
@@ -304,157 +338,157 @@
         {
           "passage": "Widgets Schism",
           "findString": "<<exit>>\n\t<</if>>",
-          "replaceFile":"game/overworld-forest/loc-lake/ivory/Kschism.txt"
+          "replaceFile": "game/overworld-forest/loc-lake/ivory/Kschism.txt"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "traits: {fangs:\"disabled\", sharpEyes:\"disabled\", mateForLife:\"disabled\", flaunting:\"disabled\"},",
-          "replace":"traits: {fangs:\"disabled\", sharpEyes:\"disabled\", mateForLife:\"disabled\", flaunting:\"disabled\", preyAnimal:\"disabled\", strongFeet:\"disabled\", predatoryAnimal:\"disabled\"},"
+          "replace": "traits: {fangs:\"disabled\", sharpEyes:\"disabled\", mateForLife:\"disabled\", flaunting:\"disabled\", preyAnimal:\"disabled\", strongFeet:\"disabled\", predatoryAnimal:\"disabled\"},"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "fox: {ears:\"disabled\", tail:\"disabled\", cheeks:\"disabled\"},",
-          "replace":"fox: {ears:\"disabled\", tail:\"disabled\", cheeks:\"disabled\"},\n\t\t\tbunny: {ears:\"disabled\", tail:\"disabled\"},"
+          "replace": "fox: {ears:\"disabled\", tail:\"disabled\", cheeks:\"disabled\"},\n\t\t\tbunny: {ears:\"disabled\", tail:\"disabled\"},"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<if $cow gte 6>>\n\t\t\t\t<<set $transformationParts.cow.tail to \"default\">>\n\t\t\t<</if>>",
-          "replace":"<<if $cow gte 6>>\n\t\t\t\t<<set $transformationParts.cow.tail to \"default\">>\n\t\t\t<</if>>\n\t\t\t<<if $bunny gte 3>>\n\t\t\t\t<<set $transformationParts.bunny.ears to \"default\">>\n\t\t\t<</if>>\n\t\t\t<<if $bunny gte 5>>\n\t\t\t\t<<set $transformationParts.bunny.tail to \"default\">>\n\t\t\t<</if>>"
+          "replace": "<<if $cow gte 6>>\n\t\t\t\t<<set $transformationParts.cow.tail to \"default\">>\n\t\t\t<</if>>\n\t\t\t<<if $bunny gte 3>>\n\t\t\t\t<<set $transformationParts.bunny.ears to \"default\">>\n\t\t\t<</if>>\n\t\t\t<<if $bunny gte 5>>\n\t\t\t\t<<set $transformationParts.bunny.tail to \"default\">>\n\t\t\t<</if>>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<if $transformationParts.traits is undefined>>",
-          "replace":"<<if $transformationParts.bunny is undefined>>\n\t\t<<set $transformationParts.bunny to {ears:\"disabled\", tail:\"disabled\"}>>\n\t<</if>>\n\t<<if $transformationParts.traits is undefined>>"
+          "replace": "<<if $transformationParts.bunny is undefined>>\n\t\t<<set $transformationParts.bunny to {ears:\"disabled\", tail:\"disabled\"}>>\n\t<</if>>\n\t<<if $transformationParts.traits is undefined>>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<</if>>\n\t/* Setup chimera's config */",
-          "replace":"<<if $cat gte 2 or $harpy gte 2 or $fox gte 2 or $wolfgirl gte 2>>\n\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t<</if>>\n\t<</if>>\n\t<<if $transformationParts.bunny is undefined>>\n\t\t<<set $transformationParts.traits.bunny to {preyAnimal:\"disabled\", strongFeet:\"disabled\"}>>\n\t<</if>>\n\t/* Setup chimera's config */"
+          "replace": "<<if $cat gte 2 or $harpy gte 2 or $fox gte 2 or $wolfgirl gte 2>>\n\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t<</if>>\n\t<</if>>\n\t<<if $transformationParts.bunny is undefined>>\n\t\t<<set $transformationParts.traits.bunny to {preyAnimal:\"disabled\", strongFeet:\"disabled\"}>>\n\t<</if>>\n\t/* Setup chimera's config */"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<case \"angel\">> <<set $angelbuild = Math.clamp($angelbuild + _args[1], 0, 100)>>",
-          "replace":"<<case \"bunny\">> <<set $bunnybuild  = Math.clamp($bunnybuild   + _args[1], 0, 100)>>\n\t\t\t<<case \"angel\">> <<set $angelbuild = Math.clamp($angelbuild + _args[1], 0, 100)>>"
+          "replace": "<<case \"bunny\">> <<set $bunnybuild  = Math.clamp($bunnybuild   + _args[1], 0, 100)>>\n\t\t\t<<case \"angel\">> <<set $angelbuild = Math.clamp($angelbuild + _args[1], 0, 100)>>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<set $foxbuild = Math.clamp($foxbuild - _args[1], 0, 100)>>\n\t\t<</if>>",
-          "replace":"<<set $foxbuild = Math.clamp($foxbuild - _args[1], 0, 100)>>\n\t\t<</if>>\n\t\t<<if _args[0] isnot \"bunny\" and $worn.head.name isnot \"carrot pin\">>\n\t\t\t<<set $bunnybuild = Math.clamp($bunnybuild - _args[1], 0, 100)>>\n\t\t<</if>>"
+          "replace": "<<set $foxbuild = Math.clamp($foxbuild - _args[1], 0, 100)>>\n\t\t<</if>>\n\t\t<<if _args[0] isnot \"bunny\" and $worn.head.name isnot \"carrot pin\">>\n\t\t\t<<set $bunnybuild = Math.clamp($bunnybuild - _args[1], 0, 100)>>\n\t\t<</if>>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<if $wolfgirl gte 6>>\n\t\t<<def 5>>\n\t<</if>>\n\n\t<<transformationAlteration>>\n\n\t<<if $cat gt 0 or $wolfgirl gt 0 or $cow gt 0 or $harpy gt 0 or $fox gt 0>>",
-          "replace":"<<if $bunnybuild gte 1 and $worn.head.name isnot \"carrot pin\" and playerNormalPregnancyType() isnot \"bunny\">>\n\t\t<<transform bunny -1>>\n\t<</if>>\n\n\t<<if $wolfgirl gte 6>>\n\t\t<<def 5>>\n\t<</if>>\n\n\t<<if $bunnybuild gte 6>>\n\t\t<<sub 5>>\n\t<</if>>\n\n\t<<transformationAlteration>>\n\n\t<<if $cat gt 0 or $wolfgirl gt 0 or $cow gt 0 or $harpy gt 0 or $fox gt 0 or $bunny gt 0>>"
+          "replace": "<<if $bunnybuild gte 1 and $worn.head.name isnot \"carrot pin\" and playerNormalPregnancyType() isnot \"bunny\">>\n\t\t<<transform bunny -1>>\n\t<</if>>\n\n\t<<if $wolfgirl gte 6>>\n\t\t<<def 5>>\n\t<</if>>\n\n\t<<if $bunnybuild gte 6>>\n\t\t<<sub 5>>\n\t<</if>>\n\n\t<<transformationAlteration>>\n\n\t<<if $cat gt 0 or $wolfgirl gt 0 or $cow gt 0 or $harpy gt 0 or $fox gt 0 or $bunny gt 0>>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<earnFeat \"Wolf\">>",
-          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t\t\t\t<<earnFeat \"Wolf\">>"
+          "replace": "<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t\t\t\t<<earnFeat \"Wolf\">>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<foxTransform $fox>>",
-          "replace":"<<foxTransform $fox>>\n\t\t<<elseif ($bunnybuild gte 5 and $physicalTransform isnot 1) or ($bunny gte 1 and $physicalTransform is 1)>>\n\t\t    <<bunnyTransform $bunny>>"
+          "replace": "<<foxTransform $fox>>\n\t\t<<elseif ($bunnybuild gte 5 and $physicalTransform isnot 1) or ($bunny gte 1 and $physicalTransform is 1)>>\n\t\t    <<bunnyTransform $bunny>>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<set $wolfgirl to 5>>\n\t\t\t\t\t<<set $transformationParts.wolf.tail to \"disabled\">>",
-          "replace":"<<set $wolfgirl to 5>>\n\t\t\t\t\t<<set $transformationParts.wolf.tail to \"disabled\">>\n\t\t\t\t\t<<set $tansformationParts.traits.predatoryAnimal to \"disabled\">>"
+          "replace": "<<set $wolfgirl to 5>>\n\t\t\t\t\t<<set $transformationParts.wolf.tail to \"disabled\">>\n\t\t\t\t\t<<set $tansformationParts.traits.predatoryAnimal to \"disabled\">>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<set $wolfbuild to 0>>\n\t\t\t\t<<set $transformationParts.traits.fangs to \"disabled\">>",
-          "replace":"<<set $wolfbuild to 0>>\n\t\t\t\t<<set $transformationParts.traits.fangs to \"disabled\">>\n\t\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>"
+          "replace": "<<set $wolfbuild to 0>>\n\t\t\t\t<<set $transformationParts.traits.fangs to \"disabled\">>\n\t\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<set $wolfbuild to 100>>\n\t\t<<set $transformationParts.traits.fangs to \"default\">>",
-          "replace":"<<set $wolfbuild to 100>>\n\t\t<<set $transformationParts.traits.fangs to \"default\">>\n\t\t<<set $transformationParts.traits.predatoryAnimal to \"deafult\">>"
+          "replace": "<<set $wolfbuild to 100>>\n\t\t<<set $transformationParts.traits.fangs to \"default\">>\n\t\t<<set $transformationParts.traits.predatoryAnimal to \"deafult\">>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<set $transformationParts.cat.tail to \"default\">>\n\t\t\t\t\t<<earnFeat \"Neko\">>",
-          "replace":"<<set $transformationParts.cat.tail to \"default\">>\n\t\t\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t\t\t\t<<earnFeat \"Neko\">>"
+          "replace": "<<set $transformationParts.cat.tail to \"default\">>\n\t\t\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t\t\t\t<<earnFeat \"Neko\">>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<set $transformationParts.cat.heterochromia to \"disabled\">>",
-          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t\t<<set $transformationParts.cat.heterochromia to \"disabled\">>"
+          "replace": "<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t\t<<set $transformationParts.cat.heterochromia to \"disabled\">>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<set $transformationParts.cat.ears to \"disabled\">>\n\t\t\t\t<<set $transformationParts.cat.tail to \"disabled\">>",
-          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t<<set $transformationParts.cat.ears to \"disabled\">>\n\t\t\t\t<<set $transformationParts.cat.tail to \"disabled\">>"
+          "replace": "<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t<<set $transformationParts.cat.ears to \"disabled\">>\n\t\t\t\t<<set $transformationParts.cat.tail to \"disabled\">>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<set $transformationParts.cat.ears to \"default\">>\n\t\t<<set $transformationParts.cat.tail to \"default\">>",
-          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t<<set $transformationParts.cat.ears to \"default\">>\n\t\t<<set $transformationParts.cat.tail to \"default\">>"
+          "replace": "<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t<<set $transformationParts.cat.ears to \"default\">>\n\t\t<<set $transformationParts.cat.tail to \"default\">>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<br><br>\n\t\t\t\t<<elseif $birdbuild lt 25>>",
-          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t\t\t\t<br><br>\n\t\t\t\t<<elseif $birdbuild lt 25>>"
+          "replace": "<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t\t\t\t<br><br>\n\t\t\t\t<<elseif $birdbuild lt 25>>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<set $transformationParts.fallenAngel.wings to \"default\">>\n\t\t\t\t\t<</if>>\n\t\t\t\t\t<br><br>",
-          "replace":"<<set $transformationParts.fallenAngel.wings to \"default\">>\n\t\t\t\t\t<</if>>\n\t\t\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t\t<br><br>"
+          "replace": "<<set $transformationParts.fallenAngel.wings to \"default\">>\n\t\t\t\t\t<</if>>\n\t\t\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t\t<br><br>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<if ![\"hidden\", \"disabled\"].includes($transformationParts.bird.wings)>>",
-          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t<<if ![\"hidden\", \"disabled\"].includes($transformationParts.bird.wings)>>"
+          "replace": "<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t<<if ![\"hidden\", \"disabled\"].includes($transformationParts.bird.wings)>>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<if ![\"hidden\", \"disabled\"].includes($transformationParts.angel.wings)>>",
-          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t<<if $transformationParts.angel.wings is \"default\">>"
+          "replace": "<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t<<if $transformationParts.angel.wings is \"default\">>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<earnFeat \"Fox\">>",
-          "replace":"<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t\t\t\t<<earnFeat \"Fox\">>"
+          "replace": "<<set $transformationParts.traits.predatoryAnimal to \"default\">>\n\t\t\t\t\t<<earnFeat \"Fox\">>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<set $transformationParts.fox.tail to \"disabled\">>\n\t\t\t\t\t<br><br>",
-          "replace":"<<set $transformationParts.fox.tail to \"disabled\">>\n\t\t\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t\t<br><br>"
+          "replace": "<<set $transformationParts.fox.tail to \"disabled\">>\n\t\t\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t\t<br><br>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<set $transformationParts.traits.mateForLife to \"disabled\">>\n\t\t\t\t<<set $transformationParts.fox.cheeks to \"disabled\">>",
-          "replace":"<<set $transformationParts.traits.mateForLife to \"disabled\">>\n\t\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t<<set $transformationParts.fox.cheeks to \"disabled\">>"
+          "replace": "<<set $transformationParts.traits.mateForLife to \"disabled\">>\n\t\t\t\t<<set $transformationParts.traits.predatoryAnimal to \"disabled\">>\n\t\t\t\t<<set $transformationParts.fox.cheeks to \"disabled\">>"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<set $transformationParts.fox.cheeks to \"default\">>\n\t\t<<set $transformationParts.fox.ears to \"default\">>\n\t\t<<set $transformationParts.fox.tail to \"default\">>",
-          "replaceFile":"game/base-system/Ktransformations.txt"
+          "replaceFile": "game/base-system/Ktransformations.txt"
         },
         {
           "passage": "Transformation Widgets",
           "findString": "<<foxTransform 99>>\n<</widget>>",
-          "replace":"<<foxTransform 99>>\n\t<<bunnyTransform 99>>\n<</widget>>"
+          "replace": "<<foxTransform 99>>\n\t<<bunnyTransform 99>>\n<</widget>>"
         },
         {
           "passage": "Characteristics",
           "findString": "<<elseif $wolfgirl gte 6 or $cat gte 6 or $cow gte 6 or $harpy gte 6 or $fox gte 6>>",
-          "replace":"<<elseif $wolfgirl gte 6 or $cat gte 6 or $cow gte 6 or $harpy gte 6 or $fox gte 6 or $bunny gte 6>>"
+          "replace": "<<elseif $wolfgirl gte 6 or $cat gte 6 or $cow gte 6 or $harpy gte 6 or $fox gte 6 or $bunny gte 6>>"
         },
         {
           "passage": "Characteristics",
           "findString": "<<elseif $cow gte 6>>",
-          "replace":"<<elseif $bunny gte 6 and $demon gte 6>>\n\t\t恶魔兔\n\t\t<<elseif $bunny gte 6 and $angel gte 6>>\n\t\t月兔\n\t\t<<elseif $bunny gte 6>>\n\t\t兔子\n\t\t<<elseif $cow gte 6>>"
+          "replace": "<<elseif $bunny gte 6 and $demon gte 6>>\n\t\t恶魔兔\n\t\t<<elseif $bunny gte 6 and $angel gte 6>>\n\t\t月兔\n\t\t<<elseif $bunny gte 6>>\n\t\t兔子\n\t\t<<elseif $cow gte 6>>"
         },
         {
           "passage": "Characteristics",
           "findString": "<<if $fox gte 6>>",
-          "replace":"<<if $transformationParts.traits.strongFeet isnot \"disabled\">>\n\t\t\t\t\t<<set _dancingConfig.modifier to Math.floor(_dancingConfig.modifier * 1.15)>>\n\t\t\t\t\t<<set _dancingConfig.modTypes.good.pushUnique(\"strong feet\")>>\n\t\t\t\t\t<<set _athleticsConfig.modifier to Math.floor(_athleticsConfig.modifier * 1.15)>>\n\t\t\t\t\t<<set _athleticsConfig.modTypes.good.pushUnique(\"strong feet\")>>\n\t\t\t\t<</if>>\n\t\t\t\t<<if $fox gte 6>>"
+          "replace": "<<if $transformationParts.traits.strongFeet isnot \"disabled\">>\n\t\t\t\t\t<<set _dancingConfig.modifier to Math.floor(_dancingConfig.modifier * 1.15)>>\n\t\t\t\t\t<<set _dancingConfig.modTypes.good.pushUnique(\"动如脱兔\")>>\n\t\t\t\t\t<<set _athleticsConfig.modifier to Math.floor(_athleticsConfig.modifier * 1.15)>>\n\t\t\t\t\t<<set _athleticsConfig.modTypes.good.pushUnique(\"动如脱兔\")>>\n\t\t\t\t<</if>>\n\t\t\t\t<<if $fox gte 6>>"
         },
         {
           "passage": "Characteristics",
           "findString": "<<if $wolfgirl gte 2 or $cat gte 2 or $cow gte 2 or $fox gte 2>>",
-          "replace":"<<if $wolfgirl gte 2 or $cat gte 2 or $cow gte 2 or $fox gte 2 or $bunny gte 2>>"
+          "replace": "<<if $wolfgirl gte 2 or $cat gte 2 or $cow gte 2 or $fox gte 2 or $bunny gte 2>>"
         }
       ]
     },
@@ -463,12 +497,12 @@
       "addonName": "ImageLoaderAddon",
       "modVersion": "2.0.0"
     },
-     {
+    {
       "modName": "ReplacePatcher",
       "addonName": "ReplacePatcherAddon",
       "modVersion": "1.0.0",
       "params": {
-      "js": [
+        "js": [
           {
             "fileName": "pregnancy-types.js",
             "from": "if (V.fox >= 6) return \"fox\";",
@@ -485,9 +519,14 @@
             "to": "if (V.fox >= 2) minArousal += Math.clamp(V.foxbuild, 0, 100) * 10;if (V.bunny >= 2) minArousal += Math.clamp(V.bunnybuild, 0, 100) * 10;"
           },
           {
-            "fileName": "canvasmodel-editor.js",
-            "from": "selectOption(\"fox_cheeks_type\", [\"disabled\", \"hidden\", \"default\"]),",
-            "to": "selectOption(\"fox_cheeks_type\", [\"disabled\", \"hidden\", \"default\"]),selectOption(\"bunny_tail_type\", [\"disabled\", \"hidden\", \"default\", \"fluffy\"]),selectOption(\"bunny_tail_layer\", [\"front\", \"back\"]),selectOption(\"bunny_ears_type\", [\"disabled\", \"hidden\", \"default\", \"lop\"]),"
+            "fileName": "canvasmodel-main.js",
+            "from": "\t\t\t\"fox_cheeks_type\": \"disabled\",\n\t\t\t// body writings",
+            "to": "\t\t\t\"fox_cheeks_type\": \"disabled\",\n\t\t\t\"bunny_tail_type\": \"disabled\",\n\t\t\t\"bunny_tail_layer\": \"front\",\n\t\t\t\"bunny_ears_type\": \"disabled\",\n\t\t\t\"bunny_ears_layer\": \"front\",\n\t\t\t// body writings"
+          },
+          {
+            "fileName": "canvasmodel-main.js",
+            "from": "return options.show_tf && isPartEnabled(options.fox_cheeks_type) && !options.hideAll;\n\t\t\t},\n\t\t},",
+            "to": "return options.show_tf && isPartEnabled(options.fox_cheeks_type) && !options.hideAll;\n\t\t\t},\n\t\t\tfilters: [\"hair\"],\n\t\t\tz: ZIndices.lower,\n\t\t\tanimation: \"idle\"\n\t\t},\n\n\n\t\t/***\n\t\t *    ██████  ██   ██ ███    ██ ███    ██ ██ ██\n\t\t *    ██   ██ ██   ██ ████   ██ ████   ██ ██ ██\n\t\t *    ██████  ██   ██ ██ ██  ██ ██ ██  ██  ███ \n\t\t *    ██   ██ ██   ██ ██  ██ ██ ██  ██ ██   █\n\t\t *    ██████   █████  ██   ████ ██   ████   █\n\t\t * \n\t\t * \n\t\t */\n\t\t\"bunny_tail\": {\n\t\t\tsrcfn(options) {\n\t\t\t\treturn `img/transformations/bunny/tail/${options.bunny_tail_type}.png`;\n\t\t\t},\n\t\t\tshowfn(options) {\n\t\t\t\treturn options.show_tf && isPartEnabled(options.bunny_tail_type);\n\t\t\t},\n\t\t\tfilters: [\"hair\"],\n\t\t\tzfn(options) {\n\t\t\t\tif (options.bunny_tail_layer === \"back\") {\n\t\t\t\t\treturn ZIndices.tail\n\t\t\t\t} else {\n\t\t\t\t\treturn ZIndices.back_lower\n\t\t\t\t}\n\t\t\t},\n\t\t\tanimation: \"idle\"\n\t\t},\n\t\t\"bunny_ear_front\": {\n\t\t\tsrcfn(options) {\n\t\t\t\treturn `img/transformations/bunny/earfront/${options.bunny_ears_type}.png`;\n\t\t\t},\n\t\t\tshowfn(options) {\n\t\t\t\treturn options.show_tf && isPartEnabled(options.bunny_ears_type);\n\t\t\t},\n\t\t\tmasksrcfn(options) {\n\t\t\t\treturn options.head_mask_src;\n\t\t\t},\n\t\t\tfilters: [\"hair\"],\n\t\t\tz: ZIndices.horns,\n\t\t\tanimation: \"idle\"\n\t\t},\n\t\t\"bunny_ear_back\": {\n\t\t\tsrcfn(options) {\n\t\t\t\treturn `img/transformations/bunny/earback/${options.bunny_ears_type}.png`;\n\t\t\t},\n\t\t\tshowfn(options) {\n\t\t\t\treturn options.show_tf && isPartEnabled(options.bunny_ears_type);\n\t\t\t},\n\t\t\tmasksrcfn(options) {\n\t\t\t\treturn options.head_mask_src;\n\t\t\t},\n\t\t\tfilters: [\"hair\"],\n\t\t\tz: ZIndices.backhair,\n\t\t\tanimation: \"idle\"\n\t\t},"
           },
           {
             "fileName": "canvasmodel-img.js",
@@ -497,7 +536,7 @@
           {
             "fileName": "feats.js",
             "from": "Angel: {",
-            "to": "Bunny: {title: \"Bnuuy Syndrome\",desc: \"Instead of brain there is bnuuy\",difficulty: 1,series: \"\",filter: [\"All\", \"Transformation\"],},Angel: {"
+            "to": "Bunny: {title: \"扑朔，迷离\",desc: \"双兔傍地走，安能辨我是雄雌？\",difficulty: 1,series: \"\",filter: [\"All\", \"Transformation\"],},Angel: {"
           }
         ]
       }
@@ -530,25 +569,6 @@
           }
         ]
       }
-    },
-    {
-      "modName": "ConflictChecker",
-      "addonName": "ConflictCheckerAddon",
-      "modVersion": "^1.0.0",
-      "params": {
-        "optionalBefore": [
-          {
-            "modName": "ModI18N",
-            "version": ">=5.0.0"
-          }
-        ],
-        "optionalAfter": [
-          {
-            "modName": "GameOriginalImagePack",
-            "version": ">=1.0.0"
-          }
-        ]
-      }
     }
   ],
   "dependenceInfo": [
@@ -563,18 +583,14 @@
     {
       "modName": "ModLoader DoL ImageLoaderHook",
       "version": ">=2.10.8"
-     },
+    },
     {
       "modName": "TweeReplacer",
       "version": ">=1.0.0"
     },
-     {
+    {
       "modName": "ReplacePatcher",
       "version": ">=1.0.0"
-    },
-    {
-      "modName": "ConflictChecker",
-      "version": "^1.2.0"
     }
   ]
 }
