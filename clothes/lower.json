@@ -5,6 +5,10 @@
 			name_cap: "moriya shrine skirt",
             cn_name_cap: "守矢巫女裙",
     		variable: "moriya shrine skirt",
+			combat: {
+				reference: "longskirt",
+				mainColour: "#758ed1",
+			},
 			integrity: 350,
 			integrity_max: 350,
 			fabric_strength: 50,
